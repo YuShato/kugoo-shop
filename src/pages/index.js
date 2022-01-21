@@ -9,6 +9,7 @@ import Service from "./service";
 import Shipping from "./shipping";
 import TestDrive from "./test-drive";
 import Error from "./error";
+import AuthWrapper from "./AuthWrapper";
 
 export {
     About,
@@ -21,5 +22,6 @@ export {
     Service,
     Shipping,
     TestDrive,
-    Error
+    Error,
+    AuthWrapper
 }
