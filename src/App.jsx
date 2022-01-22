@@ -1,6 +1,5 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import logo from './logo.svg'
 import './App.css'
 import Navbar from './components/navbar'
 import Sidebar from './components/sidebar'
@@ -19,49 +18,7 @@ import {
   AuthWrapper
 } from './pages'
 import Footer from './components/footer'
-
-const PageRoute = {
-  main: {
-    route: '/',
-    text_ru: 'Главная'
-  },
-  about: {
-    route: '/about',
-    text_ru: 'О магазине'
-  },
-  actions: {
-    route: '/actions',
-    text_ru: 'Акции'
-  },
-  blog: {
-    route: '/blog',
-    text_ru: 'Блог'
-  },
-  partnership: {
-    route: '/partnership',
-    text_ru: 'Сотрудничество'
-  },
-  contacts: {
-    route: '/contacts',
-    text_ru: 'Контакты'
-  },
-  products: {
-    route: '/products',
-    text_ru: 'Каталог'
-  },
-  service: {
-    route: '/service',
-    text_ru: 'Сервис'
-  },
-  shipping: {
-    route: '/shipping',
-    text_ru: 'Доставка и оплата'
-  },
-  testDrive: {
-    route: '/testDrive',
-    text_ru: 'Тест-драйв'
-  }
-}
+import { PageRoute } from './consts/consts'
 
 function App () {
   return (
