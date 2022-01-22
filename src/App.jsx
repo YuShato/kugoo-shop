@@ -1,8 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css'
-import Navbar from './components/navbar'
-import Sidebar from './components/sidebar'
+import Header from './components/header'
 import {
   About,
   Contacts,
@@ -17,15 +16,14 @@ import {
   Error,
   AuthWrapper
 } from './pages'
-import Footer from './components/footer'
+import Footer from './components/Footer'
 import { PageRoute } from './consts/consts'
 
 function App () {
   return (
     <AuthWrapper>
       <Router>
-        <Navbar />
-        <Sidebar />
+        <Header />
         <Switch>
           <Route path={PageRoute.main.route} exact>
             <Home />

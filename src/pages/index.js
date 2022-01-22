@@ -1,14 +1,14 @@
-import About from "./about";
-import Contacts from "./contacts";
-import Home from "./home";
-import Actions from "./actions";
-import Blog from "./blog";
-import Partnership from "./partnership";
-import Products from "./products";
-import Service from "./service";
-import Shipping from "./shipping";
-import TestDrive from "./test-drive";
-import Error from "./error";
+import About from "./AboutPage";
+import Contacts from "./ContactsPage";
+import Home from "./HomePage";
+import Actions from "./ActionsPage";
+import Blog from "./BlogPage";
+import Partnership from "./PartnershipPage";
+import Products from "./ProductsPage";
+import Service from "./ServicePage";
+import Shipping from "./ShippingPage";
+import TestDrive from "./TestDrivePage";
+import Error from "./ErrorPage";
 import AuthWrapper from "./AuthWrapper";
 
 export {
