@@ -1,11 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import logo from '../../assets/logo.svg'
-import { PageRoute } from '../../consts/consts'
+import DefaultButton from '../command/DefaultButton'
 import CatalogModal from './CatalogModal'
 import SearchForm from './SearchForm'
 import UserBlock from './UserBlock'
+import { VscListSelection } from 'react-icons/vsc'
+import Logo from '../command/Logo'
 
 const showCatalogModal = evt => {
   evt.preventDefault()
@@ -15,16 +15,13 @@ const showCatalogModal = evt => {
 const HeaderCenter = () => {
   return (
     <Wrapper>
-      <Link
-        to={PageRoute.main.route}
-        aria-label='вернуться на главную  страницу'
-      >
-        <img src={logo} alt='kugoo shop' width={116} height={43} />
-      </Link>
+      <Logo/>
       <div className='catalog'>
-        <button type='button' onClick={showCatalogModal}>
-          Каталог
-        </button>
+        <DefaultButton
+          icon={<VscListSelection />}
+          title={'Каталог'}
+          onClickHandler={showCatalogModal}
+        />
         <CatalogModal />
         <SearchForm />
         <UserBlock />
@@ -35,6 +32,13 @@ const HeaderCenter = () => {
 
 const Wrapper = styled.div`
   display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  .catalog {
+    display: flex;
+    align-items: center;
+  }
 `
 
 export default HeaderCenter

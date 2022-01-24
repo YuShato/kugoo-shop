@@ -1,5 +1,6 @@
 import React from 'react'
 import { AiOutlinePlusCircle } from 'react-icons/ai'
+import styled from 'styled-components'
 import { PhoneNumberArray } from '../consts/consts'
 
 const showPhoneModal = evt => {
@@ -9,9 +10,9 @@ const showPhoneModal = evt => {
 
 function Phone () {
   return (
-    <div>
+    <Wrapper>
       <a href='tel:+7 (800) 505-54-61'>+7 (800) 505-54-61</a>
-      <button type='button' onClick={showPhoneModal}>
+      <button className='phone-btn' type='button' onClick={showPhoneModal}>
         <AiOutlinePlusCircle />
       </button>
       <ul className='phone visually-hidden'>
@@ -26,8 +27,50 @@ function Phone () {
           )
         })}
       </ul>
-    </div>
+    </Wrapper>
   )
 }
+
+const Wrapper = styled.div`
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+
+  a {
+    color: inherit;
+    font-size: 12px;
+    line-height: 18px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .phone-btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 50%;
+    /* width: 16px; */
+    height: 18px;
+
+    &:hover {
+      background-color: var(--clr-primary-3);
+      color: var(--clr-primary-5);
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+      color: var(--clr-primary-3);
+      margin: 0 auto;
+    }
+
+    &:hover svg {
+      fill: var(--clr-primary-5);
+      stroke: var(--clr-primary-5);
+      color: var(--clr-primary-5);
+    }
+  }
+`
 
 export default Phone

@@ -17,6 +17,11 @@ Variables
   --clr-primary-7: hsl(4, 81%, 65%);
   --clr-primary-8: hsl(40, 90%, 51%);
   --clr-primary-9: hsl(101, 59%, 55%);
+  --clr-primary-10: rgba(40, 39, 57, 1);
+  /* social */
+  --telegram: #039BE5;
+  --watsapp: #4CAF50;
+  --viber: rgba(142, 36, 170, 1);
   /* variables */
   --transition: all 0.3s linear;
   --spacing: 0.1rem;
@@ -63,5 +68,11 @@ a {
   padding: 0;
   margin: -1px;
   border: 0; }
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
 
 

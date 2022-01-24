@@ -16,6 +16,9 @@ const Header = () => {
 
 const Wrapper = styled.header`
   display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  
 `
 
 export default Header

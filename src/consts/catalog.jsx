@@ -47,9 +47,9 @@ const CatalogInfoArray = {
 const SearchFormData = [
     {searchInfo: 'Везде',
 searchValue: 'all'},
-    {searchInfo: 'В каталоге',
+    {searchInfo: 'Самокаты',
 searchValue: 'catalog'},
-    {searchInfo: 'В блоге',
+    {searchInfo: 'Аксессуары',
 searchValue: 'blog'},
    
 ]

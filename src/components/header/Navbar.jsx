@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { MenuLinkArray } from '../../consts/consts'
+import InfoBtn from '../command/InfoBtn'
 
 function Navbar () {
   return (
@@ -9,11 +10,11 @@ function Navbar () {
       <ul>
         {MenuLinkArray.map(
           (item, index) => {
-            const { route, text_ru, info } = item
+            const { route, text_ru, info, icon } = item
             return (
               <li key={index}>
-                <Link to={route}>{text_ru}</Link>
-                {info && <span>{info}</span>}
+                <Link to={route}>{icon ? icon : null} {text_ru}</Link>
+                {info && <InfoBtn title={info}/>}
               </li>
             )
           }
@@ -28,6 +29,10 @@ const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  ul {
+    display: flex;
+  }
 `
 
 export default Navbar
