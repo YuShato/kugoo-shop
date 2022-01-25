@@ -28,7 +28,7 @@ Variables
   --radius: 0.25rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  --max-width: 1380px;
+  --max-width: 1170px;
 }
 
 /*
@@ -44,6 +44,7 @@ Global Styles
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Jost', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -52,9 +53,11 @@ body {
   line-height: 1.5;
   font-size: 0.875rem;
 }
+
 ul {
   list-style-type: none;
 }
+
 a {
   text-decoration: none;
 }
@@ -67,12 +70,13 @@ a {
   height: 1px;
   padding: 0;
   margin: -1px;
-  border: 0; }
+  border: 0;
+}
 
 .container {
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
-
-

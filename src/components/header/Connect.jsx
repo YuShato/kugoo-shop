@@ -14,6 +14,7 @@ const showContactsModal = evt => {
 function Connect () {
   return (
     <ConnectWrapper className='connect'>
+      <div className='container'>
         <ul className='connect__list connect'>
           {ConnectLinkArray.map((link, index) => {
             const { route, text_ru } = link
@@ -40,7 +41,8 @@ function Connect () {
             )
           })}
         </ul>
-      <Phone />
+        <Phone />
+      </div>
     </ConnectWrapper>
   )
 }
@@ -51,11 +53,12 @@ const ConnectWrapper = styled.div`
   margin: 12px 0;
   border-top: 1px solid #ecf3ff;
   border-bottom: 1px solid #ecf3ff;
+  padding: 10px;
 
   .connect {
     display: flex;
     gap: 30px;
-    margin-right: 30px;
+    margin-right: 24px;
   }
 
   .connect__item {
@@ -64,7 +67,7 @@ const ConnectWrapper = styled.div`
 
   .social {
     display: flex;
-    gap: 15px;
+    gap: 9px;
     margin-right: 15px;
   }
 

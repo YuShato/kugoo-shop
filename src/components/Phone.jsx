@@ -35,6 +35,7 @@ const Wrapper = styled.div`
   display: flex;
   gap: 10px;
   margin-left: auto;
+  margin-right: 38px;
 
   a {
     color: inherit;

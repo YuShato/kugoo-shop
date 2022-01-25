@@ -15,6 +15,7 @@ const showCatalogModal = evt => {
 const HeaderCenter = () => {
   return (
     <Wrapper>
+      <div className="container">
       <Logo/>
       <div className='catalog'>
         <DefaultButton
@@ -26,6 +27,7 @@ const HeaderCenter = () => {
         <SearchForm />
         <UserBlock />
       </div>
+      </div>
     </Wrapper>
   )
 }
@@ -34,10 +36,14 @@ const Wrapper = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
+  margin-top: 15px;
+  margin-bottom: 35px;
 
   .catalog {
     display: flex;
     align-items: center;
+    margin-left: 36px;
+    width: 100%;
   }
 `
 

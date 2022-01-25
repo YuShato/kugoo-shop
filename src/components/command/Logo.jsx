@@ -21,6 +21,7 @@ const Wrapper = styled(Link)`
   text-transform: uppercase;
   color: #282739;
   transition: var(--transition);
+  margin-left: 11px;
 
   &:hover {
     color: var(--clr-primary-8);

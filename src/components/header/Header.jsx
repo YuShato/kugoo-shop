@@ -6,7 +6,7 @@ import Navbar from './Navbar'
 import Sidebar from './Sidebar'
 
 const Header = () => {
-  return <Wrapper>
+  return <Wrapper className='container'>
       <Connect/>
       <HeaderCenter/>
       <Navbar/>

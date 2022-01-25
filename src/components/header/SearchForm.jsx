@@ -25,7 +25,7 @@ const SearchForm = () => {
       <input type='text' name='text' placeholder='Искать самокат KUGO' />
       <DefaultButton
         icon={<AiOutlineSearch />}
-        aria-label='search'
+        aria-label='искать по запросу'
         onClickHandler={searchData}
       />
     </SearchWrapper>
@@ -38,24 +38,33 @@ const SearchWrapper = styled.form`
   box-sizing: border-box;
   border-radius: 5px;
   justify-content: space-between;
+  margin-left: 25px;
+  width: 100%;
+  max-width: 600px;
 
   input {
     border: none;
-    padding: 10px;
+    padding: 10px 20px;
+    width: 100%;
   }
 
   select {
     background-color: var(--clr-primary-4);
     border: none;
     border-radius: 5px;
-    padding: 7px 10px;
+    padding: 10px 14px;
     appearance: none;
     font-size: 14px;
-    min-width: 100px;
+    width:  80px;
   }
 
   option:hover {
     color: var(--clr-primary-1);
+  }
+
+  button svg {
+    width: 16px;
+    height: 16px;
   }
 `
 

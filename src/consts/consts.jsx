@@ -46,13 +46,13 @@ const MenuLinkArray = [
 
 const ConnectLinkArray = [
   {
-    route: '/partnership',
-    text_ru: 'Сотрудничество'
-  },
-  {
     route: '/service',
     text_ru: 'Сервис',
     type: LinkType.CONNECT
+  },
+  {
+    route: '/partnership',
+    text_ru: 'Сотрудничество'
   }
 ]
 
@@ -134,20 +134,25 @@ const PageRoute = {
   }
 }
 
-const  PhoneNumberArray = [
-    {phone: '+ 7 (499) 350-76-92',
-    info: 'Сервисный центр',
-    time: null
-    },
-    {phone: '+7 (499) 281-64-52',
+const PhoneNumberArray = [
+  { phone: '+ 7 (499) 350-76-92', info: 'Сервисный центр', time: null },
+  {
+    phone: '+7 (499) 281-64-52',
     info: 'Оптовый отдел',
-    time:'пн-сб 10:00 - 19:00'
-    },
-    {phone: '+7 (499) 350-76-92',
+    time: 'пн-сб 10:00 - 19:00'
+  },
+  {
+    phone: '+7 (499) 350-76-92',
     info: 'Отдел рекламаций и претензий',
-    time:'ср-вс с 10:00 до 19:00'
-    },
+    time: 'ср-вс с 10:00 до 19:00'
+  }
 ]
 
-
-export { PageRoute, LinkType, MenuLinkArray, SocialLinkArray, ConnectLinkArray, PhoneNumberArray }
+export {
+  PageRoute,
+  LinkType,
+  MenuLinkArray,
+  SocialLinkArray,
+  ConnectLinkArray,
+  PhoneNumberArray
+}
