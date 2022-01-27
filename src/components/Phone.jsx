@@ -35,7 +35,8 @@ const Wrapper = styled.div`
   display: flex;
   gap: 10px;
   margin-left: auto;
-  margin-right: 38px;
+  margin-right: 50px;
+  margin-top: 4px;
 
   a {
     color: inherit;
@@ -50,7 +51,6 @@ const Wrapper = styled.div`
     background-color: transparent;
     cursor: pointer;
     border-radius: 50%;
-    /* width: 16px; */
     height: 18px;
 
     &:hover {

@@ -33,8 +33,9 @@ const NavContainer = styled.nav`
   justify-content: center;
   width: 100%;
   background-color: var(--clr-primary-4);
-  padding-top: 10px;
+  padding-top: 8px;
   padding-bottom: 10px;
+  padding-left: 17px;
 
   ul {
     display: flex;

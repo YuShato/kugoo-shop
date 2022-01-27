@@ -29,7 +29,7 @@ const Wrapper = styled.ul`
 
   .user__link {
     color: inherit;
-    border-radius: 50%;
+    border-radius: 300px;
 
     & svg {
       width: 30px;

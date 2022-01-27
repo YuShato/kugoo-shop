@@ -44,14 +44,11 @@ const CatalogInfoArray = {
   ]
 }
 
-const SearchFormData = [
-    {searchInfo: 'Везде',
-searchValue: 'all'},
-    {searchInfo: 'Самокаты',
-searchValue: 'catalog'},
-    {searchInfo: 'Аксессуары',
-searchValue: 'blog'},
-   
+
+const CatalogSelectOptions = [
+  { value: 'all', label: 'Везде' },
+  { value: 'kicks', label: 'Самокаты' },
+  { value: 'access', label: 'Аксессуары' }
 ]
 
-export { CatalogInfoArray, SearchFormData }
+export { CatalogInfoArray, CatalogSelectOptions }

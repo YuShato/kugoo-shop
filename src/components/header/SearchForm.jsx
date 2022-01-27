@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import { SearchFormData } from '../../consts/catalog'
 import { AiOutlineSearch } from 'react-icons/ai'
 import DefaultButton from '../command/DefaultButton'
+import SelectCatalog from './SelectCatalog'
 
 const searchData = evt => {
   evt.preventDefault()
@@ -12,16 +12,7 @@ const searchData = evt => {
 const SearchForm = () => {
   return (
     <SearchWrapper>
-      <select name='search-place' id='search-place'>
-        {SearchFormData.map((item, index) => {
-          const { searchInfo, searchValue } = item
-          return (
-            <option key={index} value={searchValue}>
-              {searchInfo}
-            </option>
-          )
-        })}
-      </select>
+      <SelectCatalog/>
       <input type='text' name='text' placeholder='Искать самокат KUGO' />
       <DefaultButton
         icon={<AiOutlineSearch />}

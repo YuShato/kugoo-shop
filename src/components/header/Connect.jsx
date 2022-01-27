@@ -50,7 +50,7 @@ function Connect () {
 const ConnectWrapper = styled.div`
   width: 100%;
   display: flex;
-  margin: 12px 0;
+  margin: 0 0 12px 0;
   border-top: 1px solid #ecf3ff;
   border-bottom: 1px solid #ecf3ff;
   padding: 10px;
@@ -59,6 +59,7 @@ const ConnectWrapper = styled.div`
     display: flex;
     gap: 30px;
     margin-right: 24px;
+    margin-left: 10px;
   }
 
   .connect__item {

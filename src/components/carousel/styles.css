@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+
+
+  .number-slide1 {
+    background-image: url(../../../public/assets/slider/1.jpg);
+  }
+  
+  .number-slide2 {
+    background-image: url(../../../public/assets/slider/2.jpg);
+   
+  }
+  
+  .number-slide3 {
+    background-image: url(../../../public/assets/slider/3.jpg);
+    
+  }
+  
+  .number-slide4 {
+    background-image: url(../../../public/assets/slider/4.jpg);
+  }
+  
+  .number-slide5 {
+    background-image: url(../../../public/assets/slider/5.jpg);
+  }
+  
+
+  .banners {
+      height: 420px;
+      width: 100%;
+      border-radius: 10px;
+  }
+

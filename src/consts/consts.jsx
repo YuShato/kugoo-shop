@@ -9,17 +9,17 @@ const LinkType = {
 
 const MenuLinkArray = [
   {
-    route: '/',
-    text_ru: 'Главная'
-  },
-  {
     route: '/about',
     text_ru: 'О магазине'
   },
   {
-    route: '/actions',
-    text_ru: 'Акции',
-    info: '%'
+    route: '/shipping',
+    text_ru: 'Доставка и оплата',
+    info: 'Доступна рассрочка'
+  },
+  {
+    route: '/testDrive',
+    text_ru: 'Тест-драйв'
   },
   {
     route: '/blog',
@@ -30,18 +30,10 @@ const MenuLinkArray = [
     text_ru: 'Контакты'
   },
   {
-    route: '/products',
-    text_ru: 'Каталог'
+    route: '/actions',
+    text_ru: 'Акции',
+    info: '%'
   },
-  {
-    route: '/shipping',
-    text_ru: 'Доставка и оплата',
-    info: 'Доступна рассрочка'
-  },
-  {
-    route: '/testDrive',
-    text_ru: 'Тест-драйв'
-  }
 ]
 
 const ConnectLinkArray = [

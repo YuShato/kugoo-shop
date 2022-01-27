@@ -7,7 +7,7 @@ const InfoBtn = ({ title }) => {
 
 const InfoBtnWrapper = styled.button`
   border-radius: 300px;
-  padding: 4px 8px;
+  padding: 3px 6px;
   color: var(--clr-primary-5);
   background-color: var(--clr-primary-1);
   box-sizing: border-box;
