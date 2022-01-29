@@ -1,16 +1,9 @@
 import React from 'react'
 import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
-import './styles.css'
 import SlideItem from './SlideItem'
-
-const images = [
-  './assets/slider/1.jpg',
-  './assets/slider/2.jpg',
-  './assets/slider/3.jpg',
-  './assets/slider/4.jpg',
-  './assets/slider/5.jpg'
-]
+import styled from 'styled-components'
+import images from '../../consts/images'
 
 const Slider = () => {
   const [sliderRef] = useKeenSlider(
@@ -29,7 +22,7 @@ const Slider = () => {
           if (mouseOver) return
           timeout = setTimeout(() => {
             slider.next()
-          }, 5000)
+          }, 7000)
         }
         slider.on('created', () => {
           slider.container.addEventListener('mouseover', () => {
@@ -51,13 +44,21 @@ const Slider = () => {
 
   return (
     <>
-      <div ref={sliderRef} className='keen-slider banners'>
-        {images.map((_, index) => {
-          return <SlideItem index={index + 1} key={index}/>
+      <SliderWrapper ref={sliderRef} className='keen-slider banners'>
+        {images.map((image, index) => {
+          return <SlideItem image={image} key={index} />
         })}
-      </div>
+      </SliderWrapper>
     </>
   )
 }
+
+const SliderWrapper = styled.div`
+  height: 420px;
+  width: 100%;
+  border-radius: 10px;
+  position: relative;
+  margin-top: 30px;
+`
 
 export default Slider
