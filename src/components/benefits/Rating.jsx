@@ -6,6 +6,7 @@ import star from '../../assets/img/svg/star.svg'
 const Rating = () => {
   return (
     <Wrapper>
+        {/* сделать ссылкой на  сайт яндекса, с запросом с API */}
       <img
         className='logo'
         src={yandex}

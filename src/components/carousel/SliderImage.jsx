@@ -3,19 +3,21 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { PageRoute } from '../../consts/consts'
 
-const SliderImage = ({ index, isSpecial, title }) => {
+const SliderImage = ({...image }) => {
+  const { isSpecial, title, id } = image
+  console.log(image)
   return isSpecial ? (
     <ImageWrapper>
       <img
         className='banner'
-        src={`../../assets/img/${index}.png`}
+        src={`../../assets/img/${id}.png`}
         alt={title}
       />
     </ImageWrapper>
   ) : (
     <ImageWrapper className='special'>
       <Link to={PageRoute.products.route}>
-        <img alt={title} src={`../../assets/img/${index}.jpg`} />
+        <img alt={title} src={`../../assets/img/${id}.jpg`} />
       </Link>
     </ImageWrapper>
   )

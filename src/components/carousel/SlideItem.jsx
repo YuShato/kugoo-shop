@@ -8,18 +8,18 @@ import SliderFreeBtn from './SliderFreeBtn'
 import SliderImage from './SliderImage'
 
 const SlideItem = ({ image }) => {
-  const { id, isSpecial, title, subTitle, infoBtn, action } = image
+  const { id, isSpecial } = image
   return isSpecial ? (
     <Slide className={`keen-slider__slide number-slide${id} slide`}>
-      <SliderTitle title={title} subTitle={subTitle} />
-      <BannerBtn title={infoBtn} />
-      <SliderBtn href={PageRoute.products.route} title={action} />
+      <SliderTitle {...image} />
+      <BannerBtn {...image} />
+      <SliderBtn href={PageRoute.products.route} {...image} />
       <SliderFreeBtn />
-      <SliderImage isSpecial={isSpecial} index={id} title={title} />
+      <SliderImage {...image} />
     </Slide>
   ) : (
     <Slide className={`keen-slider__slide number-slide${id} slide`}>
-      <SliderImage isSpecial={isSpecial} index={id} title={title} />
+      <SliderImage {...image} />
     </Slide>
   )
 }

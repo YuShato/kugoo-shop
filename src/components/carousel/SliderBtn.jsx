@@ -2,14 +2,15 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-const SliderBtn = ({ title, href }) => {
-  return <Wrapper to={href}>{title}</Wrapper>
+const SliderBtn = ( {href, ...image }) => {
+  const { action } = image
+  return <Wrapper to={href}>{action}</Wrapper>
 }
 
 const Wrapper = styled(Link)`
   background-color: var(--clr-primary-5);
   padding: 15px 26px;
-  top: 70%;
+  top: 77%;
   position: absolute;
   left: 12%;
   border-radius: 5px;

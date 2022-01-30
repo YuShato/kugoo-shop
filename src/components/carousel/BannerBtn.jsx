@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const BannerBtn = ({ title }) => {
-  return <Wrapper>{title}</Wrapper>
+const BannerBtn = ({ ...image }) => {
+  const { infoBtn } = image
+  return <Wrapper>{infoBtn}</Wrapper>
 }
 
 const Wrapper = styled.button`

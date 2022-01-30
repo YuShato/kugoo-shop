@@ -8,7 +8,7 @@ const BenefitsList = ({ benefitsList }) => {
     <BenefitsWrapper>
       <ul>
         {benefitsList.map((benefit, index) => (
-          <BenefitsItem key={index} benefit={benefit} />
+          <BenefitsItem key={index} {...benefit} />
         ))}
       </ul>
       <Rating />

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const BenefitsItem = ({benefit}) => {
+const BenefitsItem = ({...benefit}) => {
   const { title, subtitle } = benefit
   return (
     <Wrapper>
