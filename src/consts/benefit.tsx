@@ -1,4 +1,6 @@
-const benefits = [{
+import { IBenefit } from "../components/types/types"
+
+const benefits: IBenefit[] = [{
         title: 'Гарантия 1 год',
         subtitle: 'на весь ассортимент'
     },

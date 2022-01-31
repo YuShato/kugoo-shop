@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import DefaultButton from '../command/DefaultButton'
+import DefaultButton from '../common/DefaultButton'
 import CatalogModal from './CatalogModal'
 import SearchForm from './SearchForm'
 import UserBlock from './UserBlock'
 import { VscListSelection } from 'react-icons/vsc'
-import Logo from '../command/Logo'
+import Logo from '../common/Logo'
 
 const showCatalogModal = evt => {
   evt.preventDefault()

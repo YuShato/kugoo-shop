@@ -1,7 +1,8 @@
-import React from 'react'
+import React, {FC} from 'react'
 import styled from 'styled-components'
+import { IBenefit } from '../types/types'
 
-const BenefitsItem = ({...benefit}) => {
+const BenefitsItem: FC<IBenefit> = ({...benefit}) => {
   const { title, subtitle } = benefit
   return (
     <Wrapper>
@@ -23,6 +24,6 @@ const Wrapper = styled.div`
     font-size: 16px;
     line-height: 23px;
   }
-`
+  `
 
 export default BenefitsItem

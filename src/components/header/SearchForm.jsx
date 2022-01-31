@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { AiOutlineSearch } from 'react-icons/ai'
-import DefaultButton from '../command/DefaultButton'
+import DefaultButton from '../common/DefaultButton'
 import SelectCatalog from './SelectCatalog'
 
 const searchData = evt => {

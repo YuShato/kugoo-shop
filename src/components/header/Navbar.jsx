@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { MenuLinkArray } from '../../consts/consts'
-import InfoBtn from '../command/InfoBtn'
+import InfoBtn from '../common/InfoBtn'
 
 function Navbar () {
   return (

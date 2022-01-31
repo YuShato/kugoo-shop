@@ -1,7 +1,7 @@
 import React from 'react'
-import BenefitsList from '../components/benefits/BenefitsList'
 import Slider from '../components/carousel/Slider'
-import benefits from '../consts/benefit'
+import benefits from '../consts/benefit.tsx'
+import BenefitsList from '../components/benefits/BenefitsList.tsx'
 
 function HomePage () {
   return (

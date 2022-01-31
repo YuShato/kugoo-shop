@@ -2,8 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { ConnectLinkArray, SocialLinkArray } from '../../consts/consts'
-import DefaultLink from '../command/DefaultLink'
-import NavButton from '../command/NavButton'
+import DefaultLink from '../common/DefaultLink'
+import NavButton from '../common/NavButton'
 import Phone from '../Phone'
 
 const showContactsModal = evt => {

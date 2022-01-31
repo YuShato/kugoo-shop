@@ -5,7 +5,6 @@ import { PageRoute } from '../../consts/consts'
 
 const SliderImage = ({...image }) => {
   const { isSpecial, title, id } = image
-  console.log(image)
   return isSpecial ? (
     <ImageWrapper>
       <img

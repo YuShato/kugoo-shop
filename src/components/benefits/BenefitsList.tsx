@@ -1,9 +1,14 @@
-import React from 'react'
+import React, {FC} from 'react'
 import styled from 'styled-components'
-import BenefitsItem from './BenefitsItem'
+import { IBenefit } from '../types/types'
+import BenefitsItem from './BenefitsItem.tsx'
 import Rating from './Rating'
 
-const BenefitsList = ({ benefitsList }) => {
+interface BenefitsListProps {
+  benefitsList: IBenefit[]
+}
+
+const BenefitsList: FC<BenefitsListProps> = ({ benefitsList }) => {
   return (
     <BenefitsWrapper>
       <ul>
