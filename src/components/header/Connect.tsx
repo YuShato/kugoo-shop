@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { ConnectLinkArray, SocialLinkArray } from '../../consts/consts'
 import DefaultLink from '../common/DefaultLink'
 import NavButton from '../common/NavButton'
+import { IConnectionLink, ISocialLink } from '../types/types'
 import Phone from './Phone.tsx'
 
 const showContactsModal = evt => {
@@ -11,12 +11,13 @@ const showContactsModal = evt => {
   console.log('contacts modal open')
 }
 
-function Connect ({phoneNumberArray}) {
+
+function Connect ({phoneNumberArray, connectLinkArray, socialLinkArray}) {
   return (
     <ConnectWrapper className='connect'>
       <div className='container'>
         <ul className='connect__list connect'>
-          {ConnectLinkArray.map((link, index) => {
+          {connectLinkArray.map((link:IConnectionLink, index:number) => {
             const { route, text_ru } = link
             return (
               <li key={index} className='connect__item'>
@@ -30,7 +31,7 @@ function Connect ({phoneNumberArray}) {
           />
         </ul>
         <ul className='connect__social social'>
-          {SocialLinkArray.map((socialLink, index) => {
+          {socialLinkArray.map((socialLink:ISocialLink, index:number) => {
             const { route, text_ru, icon } = socialLink
             return (
               <li key={index} className='social__link'>

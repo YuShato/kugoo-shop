@@ -31,19 +31,18 @@ const CatalogInfoArray = {
     }
   ],
   special: [
-    { link: '/crosscountry', name_ru: 'Внедорожный' },
-    { link: '/urban', name_ru: 'Городской' },
-    { link: '/winter', name_ru: 'Зимний' },
-    { link: '/seat', name_ru: 'С сиденьем' },
-    { link: '/withoutSeat', name_ru: 'Без сиденья' }
+    { link: '/crosscountry', name_ru: 'Внедорожный', icon: null },
+    { link: '/urban', name_ru: 'Городской', icon: null },
+    { link: '/winter', name_ru: 'Зимний', icon: null },
+    { link: '/seat', name_ru: 'С сиденьем', icon: null },
+    { link: '/withoutSeat', name_ru: 'Без сиденья', icon: null }
   ],
   prescription: [
-    { link: '/kids', name_ru: 'Для детей' },
-    { link: '/adults', name_ru: 'Для взрослых' },
-    { link: '/senior', name_ru: 'Для пенсионеров' }
+    { link: '/kids', name_ru: 'Для детей', icon: null },
+    { link: '/adults', name_ru: 'Для взрослых', icon: null },
+    { link: '/senior', name_ru: 'Для пенсионеров', icon: null }
   ]
 }
-
 
 const CatalogSelectOptions = [
   { value: 'all', label: 'Везде' },

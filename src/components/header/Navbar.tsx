@@ -1,15 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { MenuLinkArray } from '../../consts/consts'
 import InfoBtn from '../common/InfoBtn'
+import { IMenuLink } from '../types/types'
 
-function Navbar () {
+const Navbar= ({menuLinkArray})  => {
   return (
     <NavContainer className='nav'>
       <div className='container'>
         <ul>
-          {MenuLinkArray.map((item, index) => {
+          {menuLinkArray.map((item:IMenuLink, index:number) => {
             const { route, text_ru, info, icon } = item
             return (
               <li key={index}>

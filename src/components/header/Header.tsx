@@ -1,17 +1,31 @@
-import React from 'react'
+import React, {FC} from 'react'
 import styled from 'styled-components'
 import Connect from './Connect.tsx'
-import HeaderCenter from './HeaderCenter'
-import Navbar from './Navbar'
+import HeaderCenter from './HeaderCenter.tsx'
+import Navbar from './Navbar.tsx'
 import Sidebar from './Sidebar'
-import { PhoneNumberArray } from '../../consts/consts'
+import { ConnectLinkArray, MenuLinkArray, PhoneNumberArray, SocialLinkArray } from '../../consts/consts'
+import {ICatalogInfo, IConnectionLink, IMenuLink, IPhoneNumber, ISocialLink} from '../types/types'
+import {CatalogInfoArray}  from '../../consts/catalog'
 
-const Header = () => {
+interface HeaderProps {
+  phoneNumberArray: IPhoneNumber[]
+  connectLinkArray: IConnectionLink[]
+  socialLinkArray: ISocialLink[]
+  catalogInfoArray: ICatalogInfo[]
+  menuLinkArray: IMenuLink[]
+}
+
+const Header:FC<HeaderProps> = () => {
   return (
     <Wrapper>
-      <Connect phoneNumberArray={PhoneNumberArray} />
-      <HeaderCenter />
-      <Navbar />
+      <Connect 
+        phoneNumberArray={PhoneNumberArray} 
+        connectLinkArray={ConnectLinkArray} 
+        socialLinkArray={SocialLinkArray}
+      />
+      <HeaderCenter catalogInfoArray={CatalogInfoArray}/>
+      <Navbar menuLinkArray={MenuLinkArray}/>
       <Sidebar />
     </Wrapper>
   )

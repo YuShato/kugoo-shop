@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
-const DefaultLink = ({ href, text, icon }) => {
+const DefaultLink = ({ href, text, icon=null }) => {
    
   return (
     <DefaultLinkWrapper to={href}>

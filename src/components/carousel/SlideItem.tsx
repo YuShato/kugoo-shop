@@ -1,7 +1,6 @@
 import React, {FC} from 'react'
 import BannerBtn from './BannerBtn.tsx'
 import SliderBtn from './SliderBtn.tsx'
-import { PageRoute } from '../../consts/consts'
 import styled from 'styled-components'
 import SliderTitle from './SliderTitle.tsx'
 import SliderFreeBtn from './SliderFreeBtn.tsx'

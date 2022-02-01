@@ -30,6 +30,7 @@ const customStyles = {
 }
 
 const SelectCatalog = () => {
+  
   return (
     <Select
       closeMenuOnSelect={true}

@@ -1,18 +1,23 @@
-import React from 'react'
+import React, {FC} from 'react'
 import styled from 'styled-components'
 import DefaultButton from '../common/DefaultButton'
-import CatalogModal from './CatalogModal'
-import SearchForm from './SearchForm'
+import CatalogModal from './CatalogModal.tsx'
+import SearchForm from './SearchForm.tsx'
 import UserBlock from './UserBlock'
 import { VscListSelection } from 'react-icons/vsc'
 import Logo from '../common/Logo'
+import { ICatalogInfo } from '../types/types'
 
-const showCatalogModal = evt => {
+interface HeaderCenterProps {
+  catalogInfoArray: ICatalogInfo[]
+}
+
+const showCatalogModal = (evt) => {
   evt.preventDefault()
   console.log('catalog modal open')
 }
 
-const HeaderCenter = () => {
+const HeaderCenter:FC<HeaderCenterProps> = ({catalogInfoArray}) => {
   return (
     <Wrapper>
       <div className="container">
@@ -23,7 +28,7 @@ const HeaderCenter = () => {
           title={'Каталог'}
           onClickHandler={showCatalogModal}
         />
-        <CatalogModal />
+        <CatalogModal catalogInfoArray={catalogInfoArray}/>
         <SearchForm />
         <UserBlock />
       </div>

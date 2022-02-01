@@ -1,13 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { CatalogInfoArray } from '../../consts/catalog'
+import { ICatalogInfo } from '../types/types'
 
-function CatalogModal () {
+function CatalogModal ({catalogInfoArray}) {
   return (
     <CatalogModalWrapper  className='visually-hidden'>
       <ul className='type'>
-        {CatalogInfoArray.types.map((type, index) => {
+        {catalogInfoArray.types.map((type:ICatalogInfo, index:number) => {
           const { link, name_ru, icon } = type
           return (
             <li key={index} className='type__item'>
@@ -18,7 +18,7 @@ function CatalogModal () {
         })}
       </ul>
       <ul className='special'>
-        {CatalogInfoArray.special.map((special, index) => {
+        {catalogInfoArray.special.map((special:ICatalogInfo, index:number) => {
           const { link, name_ru } = special
           return (
             <li key={index} className='special__item'>
@@ -28,7 +28,7 @@ function CatalogModal () {
         })}
       </ul>
       <ul className='prescription'>
-        {CatalogInfoArray.prescription.map((prescription, index) => {
+        {catalogInfoArray.prescription.map((prescription:ICatalogInfo, index:number) => {
           const { link, name_ru } = prescription
           return (
             <li key={index} className='prescription__item'>

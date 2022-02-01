@@ -12,7 +12,7 @@ const searchData = evt => {
 const SearchForm = () => {
   return (
     <SearchWrapper>
-      <SelectCatalog/>
+      <SelectCatalog />
       <input type='text' name='text' placeholder='Искать самокат KUGO' />
       <DefaultButton
         icon={<AiOutlineSearch />}
