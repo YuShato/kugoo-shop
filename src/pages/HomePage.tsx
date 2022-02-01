@@ -1,13 +1,15 @@
-import React from 'react'
-import Slider from '../components/carousel/Slider'
+import React, {FC} from 'react'
+import Slider from '../components/carousel/Slider.tsx'
 import benefits from '../consts/benefit.tsx'
 import BenefitsList from '../components/benefits/BenefitsList.tsx'
+import images from '../consts/images.tsx'
 
-function HomePage () {
+
+const HomePage: FC = () => {
   return (
     <>
       <div className='container'>
-        <Slider />
+        <Slider images={images} />
       </div>
       <div className='container'>
         <BenefitsList benefitsList={benefits} />

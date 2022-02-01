@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import { IImage } from '../types/types'
 
-const BannerBtn = ({ ...image }) => {
+const BannerBtn = ({ ...image }:IImage) => {
   const { infoBtn } = image
   return <Wrapper>{infoBtn}</Wrapper>
 }

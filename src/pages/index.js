@@ -1,6 +1,5 @@
 import About from './AboutPage';
 import Contacts from './ContactsPage';
-import Home from './HomePage'
 import Actions from './ActionsPage';
 import Blog from './BlogPage';
 import Partnership from './PartnershipPage';
@@ -14,7 +13,6 @@ import AuthWrapper from './AuthWrapper'
 export {
     About,
     Contacts,
-    Home,
     Actions,
     Blog,
     Partnership,

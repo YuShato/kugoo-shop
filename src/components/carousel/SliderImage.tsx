@@ -2,8 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { PageRoute } from '../../consts/consts'
+import { IImage } from '../types/types'
 
-const SliderImage = ({...image }) => {
+const SliderImage = ({...image }:IImage) => {
   const { isSpecial, title, id } = image
   return isSpecial ? (
     <ImageWrapper>

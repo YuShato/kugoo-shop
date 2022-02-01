@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import { IImage } from '../types/types'
 
-const SliderTitle = ({...image}) => {
+const SliderTitle = ({...image}:IImage) => {
   const { title, subtitle } = image
   
   return (

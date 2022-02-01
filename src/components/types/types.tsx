@@ -8,10 +8,11 @@ export interface IBenefit {
 export interface IImage  {
     id: number
     isSpecial: boolean
-    title: string
-    subtitle: string
-    infoBtn: string
-    action: string
+    title: string | null
+    subtitle: string | null
+    infoBtn: string  | null
+    action: string | null
+    src: string | null
 }
 
 export interface IBlock {
@@ -19,4 +20,10 @@ export interface IBlock {
     icon: ReactElement | ReactNode
     info: string
     text_ru: string
+}
+
+export interface IPhoneNumber {
+    phone: string
+    time: string 
+    info: string
 }

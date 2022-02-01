@@ -2,7 +2,7 @@ import React, {FC} from 'react'
 import styled from 'styled-components'
 import { IBenefit } from '../types/types'
 import BenefitsItem from './BenefitsItem.tsx'
-import Rating from './Rating'
+import Rating from './Rating.tsx'
 
 interface BenefitsListProps {
   benefitsList: IBenefit[]

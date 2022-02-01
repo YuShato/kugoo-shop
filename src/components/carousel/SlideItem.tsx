@@ -1,19 +1,20 @@
-import React from 'react'
-import BannerBtn from './BannerBtn'
-import SliderBtn from './SliderBtn'
+import React, {FC} from 'react'
+import BannerBtn from './BannerBtn.tsx'
+import SliderBtn from './SliderBtn.tsx'
 import { PageRoute } from '../../consts/consts'
 import styled from 'styled-components'
-import SliderTitle from './SliderTitle'
-import SliderFreeBtn from './SliderFreeBtn'
-import SliderImage from './SliderImage'
+import SliderTitle from './SliderTitle.tsx'
+import SliderFreeBtn from './SliderFreeBtn.tsx'
+import SliderImage from './SliderImage.tsx'
+import { IImage } from '../types/types'
 
-const SlideItem = ({ image }) => {
+const SlideItem: FC<IImage> = ({ ...image }) => {
   const { id, isSpecial } = image
   return isSpecial ? (
     <Slide className={`keen-slider__slide number-slide${id} slide`}>
       <SliderTitle {...image} />
       <BannerBtn {...image} />
-      <SliderBtn href={PageRoute.products.route} {...image} />
+      <SliderBtn {...image} />
       <SliderFreeBtn />
       <SliderImage {...image} />
     </Slide>

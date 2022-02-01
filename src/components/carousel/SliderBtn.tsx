@@ -1,10 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import { PageRoute } from '../../consts/consts'
+import { IImage } from '../types/types'
 
-const SliderBtn = ( {href, ...image }) => {
-  const { action } = image
-  return <Wrapper to={href}>{action}</Wrapper>
+
+const SliderBtn = ( { ...image }:IImage) => {
+  const {action} = image 
+  return <Wrapper to={PageRoute.products.route}>{action}</Wrapper>
 }
 
 const Wrapper = styled(Link)`

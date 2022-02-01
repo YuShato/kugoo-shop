@@ -1,19 +1,24 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { useKeenSlider } from 'keen-slider/react'
 import 'keen-slider/keen-slider.min.css'
-import SlideItem from './SlideItem'
+import SlideItem from './SlideItem.tsx'
 import styled from 'styled-components'
-import images from '../../consts/images'
+import { IImage } from '../types/types'
 
-const Slider = () => {
+
+interface ImagesListProps {
+  images: IImage[]
+}
+
+const Slider:FC<ImagesListProps> = ({images}) => {
   const [sliderRef] = useKeenSlider(
     {
       loop: true
     },
     [
       slider => {
-        let timeout
-        let mouseOver = false
+        let timeout:NodeJS.Timeout
+        let mouseOver:boolean = false
         function clearNextTimeout () {
           clearTimeout(timeout)
         }
@@ -45,8 +50,8 @@ const Slider = () => {
   return (
     <>
       <SliderWrapper ref={sliderRef} className='keen-slider banners'>
-        {images.map((image, index) => {
-          return <SlideItem image={image} key={index} />
+        {images.map((image:IImage, index:number) => {
+          return <SlideItem {...image} key={index} />
         })}
       </SliderWrapper>
     </>

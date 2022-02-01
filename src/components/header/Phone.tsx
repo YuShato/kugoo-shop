@@ -1,14 +1,13 @@
 import React from 'react'
 import { AiOutlinePlusCircle } from 'react-icons/ai'
 import styled from 'styled-components'
-import { PhoneNumberArray } from '../consts/consts'
 
 const showPhoneModal = evt => {
   evt.preventDefault()
   console.log('modal phone open')
 }
 
-function Phone () {
+const  Phone = ({phoneNumberArray}) => {
   return (
     <Wrapper>
       <a href='tel:+7 (800) 505-54-61'>+7 (800) 505-54-61</a>
@@ -16,7 +15,7 @@ function Phone () {
         <AiOutlinePlusCircle />
       </button>
       <ul className='phone visually-hidden'>
-        {PhoneNumberArray.map((phoneNumber, index) => {
+        {phoneNumberArray.map((phoneNumber, index) => {
           const { phone, info, time } = phoneNumber
           return (
             <div key={index}>

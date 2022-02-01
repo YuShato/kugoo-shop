@@ -4,14 +4,14 @@ import styled from 'styled-components'
 import { ConnectLinkArray, SocialLinkArray } from '../../consts/consts'
 import DefaultLink from '../common/DefaultLink'
 import NavButton from '../common/NavButton'
-import Phone from '../Phone'
+import Phone from './Phone.tsx'
 
 const showContactsModal = evt => {
   evt.preventDefault()
   console.log('contacts modal open')
 }
 
-function Connect () {
+function Connect ({phoneNumberArray}) {
   return (
     <ConnectWrapper className='connect'>
       <div className='container'>
@@ -41,7 +41,7 @@ function Connect () {
             )
           })}
         </ul>
-        <Phone />
+        <Phone phoneNumberArray={phoneNumberArray} />
       </div>
     </ConnectWrapper>
   )

@@ -1,9 +1,9 @@
-import React from 'react'
+import React, {FC} from 'react'
 import styled from 'styled-components'
 import yandex from '../../assets/img/svg/yandex.svg'
 import star from '../../assets/img/svg/star.svg'
 
-const Rating = () => {
+const Rating:FC = () => {
   return (
     <Wrapper>
         {/* сделать ссылкой на  сайт яндекса, с запросом с API */}
