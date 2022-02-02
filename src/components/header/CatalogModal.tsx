@@ -1,9 +1,17 @@
-import React from 'react'
+import { FC } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { ICatalogInfo } from '../types/types'
 
-function CatalogModal ({catalogInfoArray}) {
+interface CatalogModalProps {
+  catalogInfoArray: {
+    types: ICatalogInfo[]
+    special: ICatalogInfo[]
+    prescription: ICatalogInfo[]
+  }
+}
+
+const CatalogModal:FC<CatalogModalProps> = ({catalogInfoArray}) => {
   return (
     <CatalogModalWrapper  className='visually-hidden'>
       <ul className='type'>

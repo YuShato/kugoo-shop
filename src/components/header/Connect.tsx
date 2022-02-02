@@ -1,18 +1,23 @@
-import React from 'react'
+import { FC } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import DefaultLink from '../common/DefaultLink'
 import NavButton from '../common/NavButton'
-import { IConnectionLink, ISocialLink } from '../types/types'
-import Phone from './Phone.tsx'
+import { IConnectionLink, ISocialLink, IPhoneNumber } from '../types/types';
+import Phone from './Phone'
 
-const showContactsModal = evt => {
+interface  ConnectProps {
+  phoneNumberArray: IPhoneNumber[]
+  connectLinkArray: IConnectionLink[]
+  socialLinkArray: ISocialLink[]
+}
+
+const showContactsModal = (evt: { preventDefault: () => void }) => {
   evt.preventDefault()
   console.log('contacts modal open')
 }
 
-
-function Connect ({phoneNumberArray, connectLinkArray, socialLinkArray}) {
+const Connect:FC<ConnectProps> = ({phoneNumberArray, connectLinkArray, socialLinkArray}) => {
   return (
     <ConnectWrapper className='connect'>
       <div className='container'>

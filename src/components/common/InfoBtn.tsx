@@ -1,7 +1,11 @@
-import React from 'react'
+import { FC } from 'react'
 import styled from 'styled-components'
 
-const InfoBtn = ({ title }) => {
+interface InfoBtnProps {
+  title: string
+}
+
+const InfoBtn:FC<InfoBtnProps> = ({ title }) => {
   return <InfoBtnWrapper>{title}</InfoBtnWrapper>
 }
 

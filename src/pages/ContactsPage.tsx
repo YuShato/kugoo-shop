@@ -1,6 +1,6 @@
-import React from 'react';
+import { FC } from 'react';
 
-function ContactsPage() {
+const ContactsPage:FC = () => {
   return <div>Контакты</div>;
 }
 

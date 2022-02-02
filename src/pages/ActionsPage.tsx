@@ -1,6 +1,6 @@
-import React from 'react';
+import { FC } from "react";
 
-function ActionsPage() {
+const ActionsPage:FC = () => {
   return <div className='container'>Акции</div>;
 }
 

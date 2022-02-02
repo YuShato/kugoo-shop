@@ -1,10 +1,14 @@
-import React from 'react'
+import { FC } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import InfoBtn from '../common/InfoBtn'
 import { IMenuLink } from '../types/types'
 
-const Navbar= ({menuLinkArray})  => {
+interface  NavbarProps {
+  menuLinkArray:IMenuLink[]
+}
+
+const Navbar:FC<NavbarProps>= ({menuLinkArray})  => {
   return (
     <NavContainer className='nav'>
       <div className='container'>

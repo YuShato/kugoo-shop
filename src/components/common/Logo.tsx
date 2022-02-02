@@ -1,9 +1,9 @@
-import React from 'react'
+import { FC } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { PageRoute } from '../../consts/consts'
 
-const Logo = () => {
+const Logo:FC = () => {
   return (
     <Wrapper
       to={PageRoute.main.route}

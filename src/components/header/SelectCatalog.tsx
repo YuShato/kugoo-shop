@@ -1,11 +1,16 @@
-import React from 'react'
+import { FC } from 'react';
 import Select from 'react-select'
 import makeAnimated from 'react-select/animated'
+import { ICatalogOption } from '../types/types';
+
+interface SelectCatalogProps {
+  catalogSelectOptions: ICatalogOption[]
+}
 
 const animatedComponents = makeAnimated()
 
 const customStyles = {
-  option: (provided, state) => ({
+  option: (provided: any, state: { isSelected: any }) => ({
     ...provided,
     borderBottom: '1px dotted #d0d1f5',
     color: state.isSelected ? '#FFF' : 'hsl(243, 19%, 19%)',
@@ -21,7 +26,7 @@ const customStyles = {
     backgroundColor: 'hsl(220, 8%, 92%)',
     zIndex: 5,
   }),
-  singleValue: (provided, state) => {
+  singleValue: (provided: any, state: { isDisabled: any }) => {
     const opacity = state.isDisabled ? 0.5 : 1
     const transition = 'opacity 300ms'
 
@@ -29,7 +34,7 @@ const customStyles = {
   }
 }
 
-const SelectCatalog = ({catalogSelectOptions}) => {
+const SelectCatalog:FC<SelectCatalogProps> = ({catalogSelectOptions}) => {
   return (
     <Select
       closeMenuOnSelect={true}

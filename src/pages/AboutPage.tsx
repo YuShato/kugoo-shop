@@ -1,6 +1,6 @@
-import React from 'react';
+import { FC } from 'react';
 
-function AboutPage () {
+const AboutPage:FC = () => {
   return <div className='container'>О магазине</div>;
 }
 

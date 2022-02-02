@@ -1,6 +1,6 @@
-import React from 'react'
+import { FC } from 'react'
 
-function TestDrivePage () {
+const TestDrivePage:FC = () => {
   return <div>Тест драйв</div>
 }
 

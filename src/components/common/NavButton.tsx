@@ -1,7 +1,12 @@
-import React from 'react';
+import { FC } from 'react';
 import styled from 'styled-components';
 
-const NavButton = ({onClickHandler, text}) => {
+interface NavButtonProps {
+  text: string
+  onClickHandler: React.MouseEventHandler<HTMLButtonElement> | undefined
+}
+
+const NavButton:FC<NavButtonProps> = ({onClickHandler, text}) => {
     return (
         <DefaultLinkWrapper onClick={onClickHandler}>
           {text}

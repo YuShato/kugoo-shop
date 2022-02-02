@@ -1,9 +1,9 @@
-import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { PageRoute } from '../../consts/consts'
+import { FC } from 'react'
 
-const SliderFreeBtn = () => {
+const SliderFreeBtn:FC = () => {
   return (
     <Wrapper to={PageRoute.actions.route}>⚡Тест-драйв и обучение</Wrapper>
   )

@@ -1,11 +1,11 @@
-import React, {FC} from 'react'
-import BannerBtn from './BannerBtn.tsx'
-import SliderBtn from './SliderBtn.tsx'
+import {FC} from 'react'
 import styled from 'styled-components'
-import SliderTitle from './SliderTitle.tsx'
-import SliderFreeBtn from './SliderFreeBtn.tsx'
-import SliderImage from './SliderImage.tsx'
 import { IImage } from '../types/types'
+import SliderImage from './SliderImage'
+import SliderFreeBtn from './SliderFreeBtn'
+import SliderTitle from './SliderTitle'
+import BannerBtn from './BannerBtn'
+import SliderBtn from './SliderBtn'
 
 const SlideItem: FC<IImage> = ({ ...image }) => {
   const { id, isSpecial } = image

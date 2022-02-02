@@ -1,9 +1,13 @@
-import React from 'react'
+import { FC } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { IUserBlock } from '../types/types'
 
-const UserBlock = ({userBlockData}) => {
+interface UserBlockProps {
+  userBlockData: IUserBlock[]
+}
+
+const UserBlock:FC<UserBlockProps> = ({userBlockData}) => {
   return (
     <Wrapper className='user'>
       {userBlockData.map((item:IUserBlock, index:number) => {

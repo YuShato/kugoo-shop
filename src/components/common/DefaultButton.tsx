@@ -1,7 +1,13 @@
-import React from 'react'
+import { FC } from 'react'
 import styled from 'styled-components'
 
-const DefaultButton = ({ onClickHandler, title, icon}) => {
+interface DefaultButtonProps {
+  title: string
+  icon?: JSX.Element 
+  onClickHandler: React.MouseEventHandler<HTMLButtonElement> | undefined
+}
+
+const DefaultButton:FC<DefaultButtonProps> = ({ onClickHandler, title, icon}) => {
   return <Wrapper onClick={onClickHandler}>{icon ? icon : null} {title}</Wrapper>
 }
 

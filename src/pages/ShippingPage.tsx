@@ -1,6 +1,6 @@
-import React from 'react';
+import { FC } from "react";
 
-function ShippingPage() {
+const ShippingPage:FC = () => {
   return <div>Доставка и оплата</div>;
 }
 

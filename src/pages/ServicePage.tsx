@@ -1,6 +1,6 @@
-import React from 'react';
+import { FC } from 'react';
 
-function ServicePage() {
+const ServicePage:FC = () => {
   return <div>Сервис</div>;
 }
 

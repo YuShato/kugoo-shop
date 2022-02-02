@@ -1,6 +1,6 @@
-import React from 'react';
+import { FC } from 'react';
 
-function ProductsPage() {
+const ProductsPage:FC = () => {
   return <div>Каталог товаров</div>;
 }
 

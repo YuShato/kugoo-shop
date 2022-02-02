@@ -1,15 +1,18 @@
-import React from 'react'
+import { FC } from 'react'
 import { AiOutlinePlusCircle } from 'react-icons/ai'
 import styled from 'styled-components'
 import { IPhoneNumber } from '../types/types'
 
+interface PhoneProps {
+  phoneNumberArray: IPhoneNumber[]
+}
 
-const showPhoneModal = (evt) => {
+const showPhoneModal = (evt: { preventDefault: () => void }) => {
   evt.preventDefault()
   console.log('modal phone open')
 }
 
-const  Phone = ({phoneNumberArray}) => {
+const  Phone:FC<PhoneProps> = ({phoneNumberArray}) => {
   return (
     <Wrapper>
       <a href='tel:+7 (800) 505-54-61'>+7 (800) 505-54-61</a>

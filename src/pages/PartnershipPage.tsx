@@ -1,6 +1,6 @@
-import React from 'react';
+import { FC } from 'react';
 
-function PartnershipPage() {
+const PartnershipPage:FC = () => {
   return <div>Сотрудничество</div>;
 }
 

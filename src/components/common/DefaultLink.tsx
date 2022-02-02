@@ -1,9 +1,14 @@
-import React from 'react'
+import { FC } from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
-const DefaultLink = ({ href, text, icon=null }) => {
-   
+interface DefaultLinkProps {
+  href: string
+  text: string
+  icon?: JSX.Element
+}
+
+const DefaultLink:FC<DefaultLinkProps> = ({ href, text, icon=undefined }) => {
   return (
     <DefaultLinkWrapper to={href}>
       {icon ? icon : null}

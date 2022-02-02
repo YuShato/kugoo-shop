@@ -1,20 +1,24 @@
 import React, {FC} from 'react'
 import styled from 'styled-components'
 import DefaultButton from '../common/DefaultButton'
-import CatalogModal from './CatalogModal.tsx'
-import SearchForm from './SearchForm.tsx'
-import UserBlock from './UserBlock.tsx'
 import { VscListSelection } from 'react-icons/vsc'
 import Logo from '../common/Logo'
 import { ICatalogInfo, ICatalogOption, IUserBlock } from '../types/types'
+import CatalogModal from './CatalogModal'
+import SearchForm from './SearchForm'
+import UserBlock from './UserBlock'
 
 interface HeaderCenterProps {
-  catalogInfoArray: ICatalogInfo[]
+  catalogInfoArray: {
+    types: ICatalogInfo[]
+    special: ICatalogInfo[]
+    prescription: ICatalogInfo[]
+  }
   catalogSelectOptions: ICatalogOption[]
   userBlockData: IUserBlock[]
 }
 
-const showCatalogModal = (evt) => {
+const showCatalogModal = (evt: { preventDefault: () => void }) => {
   evt.preventDefault()
   console.log('catalog modal open')
 }

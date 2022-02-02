@@ -1,15 +1,20 @@
-import React from 'react'
 import styled from 'styled-components'
 import { AiOutlineSearch } from 'react-icons/ai'
 import DefaultButton from '../common/DefaultButton'
-import SelectCatalog from './SelectCatalog.tsx'
+import SelectCatalog from './SelectCatalog'
+import { ICatalogOption } from '../types/types';
+import { FC } from 'react';
 
-const searchData = evt => {
+interface SearchFormProps {
+  catalogSelectOptions: ICatalogOption[]
+}
+
+const searchData = (evt: { preventDefault: () => void }) => {
   evt.preventDefault()
   console.log('search form ')
 }
 
-const SearchForm = ({catalogSelectOptions}) => {
+const SearchForm:FC<SearchFormProps> = ({catalogSelectOptions}) => {
   return (
     <SearchWrapper>
       <SelectCatalog catalogSelectOptions={catalogSelectOptions}/>
@@ -18,8 +23,8 @@ const SearchForm = ({catalogSelectOptions}) => {
         icon={<AiOutlineSearch />}
         aria-label='искать по запросу'
         onClickHandler={searchData} 
-        title={undefined}    
-       />
+        title={undefined}
+      />
     </SearchWrapper>
   )
 }

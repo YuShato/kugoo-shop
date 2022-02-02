@@ -24,8 +24,8 @@ export interface IBlock {
 
 export interface IPhoneNumber {
     phone: string
-    time: string 
-    info: string
+    time?: string 
+    info?: string
 }
 
 export interface IConnectionLink {
@@ -69,5 +69,5 @@ export interface SelectOption {
     link: string
     icon: JSX.Element
     info: string
-    text_ru: string
+    text_ru?: string
   }

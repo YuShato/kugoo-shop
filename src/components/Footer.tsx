@@ -1,6 +1,6 @@
-import React from 'react';
+import { FC } from 'react';
 
-function Footer() {
+const Footer:FC = () => {
   return <div>Footer</div>;
 }
 

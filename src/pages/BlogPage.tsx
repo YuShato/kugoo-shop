@@ -1,6 +1,6 @@
-import React from 'react';
+import { FC } from 'react';
 
-function BlogPage() {
+const BlogPage:FC = () => {
   return <div>Блог</div>;
 }
 

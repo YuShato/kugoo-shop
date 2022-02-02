@@ -1,6 +1,6 @@
-import React from 'react';
+import { FC } from 'react';
 
-function Sidebar() {
+const Sidebar:FC = () => {
   return <div className='visually-hidden'>Sidebar</div>;
 }
 

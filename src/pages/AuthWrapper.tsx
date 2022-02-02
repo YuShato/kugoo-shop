@@ -1,8 +1,8 @@
-import React from 'react'
 import { useAuth0 } from '@auth0/auth0-react'
+import { FC } from 'react'
 import styled from 'styled-components'
 
-const AuthWrapper = ({ children }) => {
+const AuthWrapper:FC = ({ children }) => {
   const { isLoading, error } = useAuth0()
 
   if (isLoading) {
