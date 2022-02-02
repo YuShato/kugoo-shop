@@ -2,7 +2,7 @@ import { FC } from 'react'
 import styled from 'styled-components'
 
 interface DefaultButtonProps {
-  title: string
+  title?: string
   icon?: JSX.Element 
   onClickHandler: React.MouseEventHandler<HTMLButtonElement> | undefined
 }

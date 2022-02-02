@@ -1,4 +1,4 @@
-import {FC} from 'react'
+import {FC, ReactNode} from 'react'
 import styled from 'styled-components'
 import Sidebar from './Sidebar'
 import { ConnectLinkArray, MenuLinkArray, PhoneNumberArray, SocialLinkArray } from '../../consts/consts'
@@ -9,14 +9,18 @@ import Connect from './Connect'
 import HeaderCenter from './HeaderCenter'
 import Navbar from './Navbar'
 
-
 interface HeaderProps {
+  catalogInfoArray: {
+    types: ICatalogInfo[]
+    special: ICatalogInfo[]
+    prescription: ICatalogInfo[]
+  }
   phoneNumberArray: IPhoneNumber[]
   connectLinkArray: IConnectionLink[]
   socialLinkArray: ISocialLink[]
-  catalogInfoArray: ICatalogInfo[]
   menuLinkArray: IMenuLink[]
   catalogSelectOptions: ICatalogOption[]
+  children?: ReactNode; 
 }
 
 const Header:FC<HeaderProps> = () => {

@@ -1,4 +1,3 @@
-import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 import reportWebVitals from './reportWebVitals'
@@ -7,8 +6,8 @@ import App from './App'
 
 ReactDOM.render(
   <Auth0Provider
-    domain={process.env.REACT_APP_AUTH_DOMAIN}
-    clientId={process.env.REACT_APP_AUTH_CLIENT_ID}
+    domain="dev-uu1jmqjw.us.auth0.com"
+    clientId="otTHcWy94pFhMGM4nIJmzTQWp4iyXEED"
     redirectUri={window.location.origin}
     cacheLocation='localstorage'
   >

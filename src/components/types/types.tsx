@@ -7,7 +7,7 @@ export interface IBenefit {
 
 export interface IImage  {
     id: number
-    isSpecial: boolean
+    isSpecial: boolean 
     title?: string
     subtitle?: string
     infoBtn?: string 
@@ -24,14 +24,14 @@ export interface IBlock {
 
 export interface IPhoneNumber {
     phone: string
-    time?: string 
-    info?: string
+    time?: string | null
+    info?: string | null
 }
 
 export interface IConnectionLink {
     route: string
     text_ru: string
-    type: string
+    type: string | null
   }
 
 export interface ISocialLink {
@@ -43,13 +43,13 @@ export interface ISocialLink {
 export interface ICatalogInfo {
     link: string
     name_ru: string
-    icon?: JSX.Element 
+    icon?: JSX.Element  | null
 }
 
 export interface IMenuLink {
     route: string
     text_ru: string
-    info?: string
+    info?: string | null
     icon?: JSX.Element
 }
 
@@ -69,5 +69,5 @@ export interface SelectOption {
     link: string
     icon: JSX.Element
     info: string
-    text_ru?: string
+    text_ru?: string | null
   }
