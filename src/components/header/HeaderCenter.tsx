@@ -3,13 +3,15 @@ import styled from 'styled-components'
 import DefaultButton from '../common/DefaultButton'
 import CatalogModal from './CatalogModal.tsx'
 import SearchForm from './SearchForm.tsx'
-import UserBlock from './UserBlock'
+import UserBlock from './UserBlock.tsx'
 import { VscListSelection } from 'react-icons/vsc'
 import Logo from '../common/Logo'
-import { ICatalogInfo } from '../types/types'
+import { ICatalogInfo, ICatalogOption, IUserBlock } from '../types/types'
 
 interface HeaderCenterProps {
   catalogInfoArray: ICatalogInfo[]
+  catalogSelectOptions: ICatalogOption[]
+  userBlockData: IUserBlock[]
 }
 
 const showCatalogModal = (evt) => {
@@ -17,7 +19,7 @@ const showCatalogModal = (evt) => {
   console.log('catalog modal open')
 }
 
-const HeaderCenter:FC<HeaderCenterProps> = ({catalogInfoArray}) => {
+const HeaderCenter:FC<HeaderCenterProps> = ({catalogInfoArray, catalogSelectOptions, userBlockData}) => {
   return (
     <Wrapper>
       <div className="container">
@@ -29,8 +31,8 @@ const HeaderCenter:FC<HeaderCenterProps> = ({catalogInfoArray}) => {
           onClickHandler={showCatalogModal}
         />
         <CatalogModal catalogInfoArray={catalogInfoArray}/>
-        <SearchForm />
-        <UserBlock />
+        <SearchForm catalogSelectOptions={catalogSelectOptions}/>
+        <UserBlock userBlockData={userBlockData} />
       </div>
       </div>
     </Wrapper>

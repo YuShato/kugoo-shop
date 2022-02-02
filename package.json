@@ -44,6 +44,6 @@
     ]
   },
   "devDependencies": {
-    "typescript": "^1.6.0-beta"
+    "typescript": "^2.7.0-rc"
   }
 }

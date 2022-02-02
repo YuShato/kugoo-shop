@@ -5,8 +5,10 @@ import HeaderCenter from './HeaderCenter.tsx'
 import Navbar from './Navbar.tsx'
 import Sidebar from './Sidebar'
 import { ConnectLinkArray, MenuLinkArray, PhoneNumberArray, SocialLinkArray } from '../../consts/consts'
-import {ICatalogInfo, IConnectionLink, IMenuLink, IPhoneNumber, ISocialLink} from '../types/types'
-import {CatalogInfoArray}  from '../../consts/catalog'
+import {ICatalogInfo, ICatalogOption, IConnectionLink, IMenuLink, IPhoneNumber, ISocialLink} from '../types/types'
+import {CatalogInfoArray, CatalogSelectOptions}  from '../../consts/catalog'
+import {UserBlockData} from '../../consts/userBlock'
+
 
 interface HeaderProps {
   phoneNumberArray: IPhoneNumber[]
@@ -14,6 +16,7 @@ interface HeaderProps {
   socialLinkArray: ISocialLink[]
   catalogInfoArray: ICatalogInfo[]
   menuLinkArray: IMenuLink[]
+  catalogSelectOptions: ICatalogOption[]
 }
 
 const Header:FC<HeaderProps> = () => {
@@ -24,7 +27,11 @@ const Header:FC<HeaderProps> = () => {
         connectLinkArray={ConnectLinkArray} 
         socialLinkArray={SocialLinkArray}
       />
-      <HeaderCenter catalogInfoArray={CatalogInfoArray}/>
+      <HeaderCenter
+        catalogInfoArray={CatalogInfoArray}
+        catalogSelectOptions={CatalogSelectOptions}
+        userBlockData={UserBlockData}
+      />
       <Navbar menuLinkArray={MenuLinkArray}/>
       <Sidebar />
     </Wrapper>

@@ -1,12 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { UserBlockData } from '../../consts/userBlock'
+import { IUserBlock } from '../types/types'
 
-const UserBlock = () => {
+const UserBlock = ({userBlockData}) => {
   return (
     <Wrapper className='user'>
-      {UserBlockData.map((item, index) => {
+      {userBlockData.map((item:IUserBlock, index:number) => {
         const { link, icon, info, text_ru } = item
 
         return (

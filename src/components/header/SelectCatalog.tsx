@@ -1,7 +1,6 @@
 import React from 'react'
 import Select from 'react-select'
 import makeAnimated from 'react-select/animated'
-import { CatalogSelectOptions } from '../../consts/catalog'
 
 const animatedComponents = makeAnimated()
 
@@ -20,6 +19,7 @@ const customStyles = {
     borderRadius: 5,
     cursor: 'pointer',
     backgroundColor: 'hsl(220, 8%, 92%)',
+    zIndex: 5,
   }),
   singleValue: (provided, state) => {
     const opacity = state.isDisabled ? 0.5 : 1
@@ -29,14 +29,13 @@ const customStyles = {
   }
 }
 
-const SelectCatalog = () => {
-  
+const SelectCatalog = ({catalogSelectOptions}) => {
   return (
     <Select
       closeMenuOnSelect={true}
       components={animatedComponents}
-      defaultValue={CatalogSelectOptions[0]}
-      options={CatalogSelectOptions}
+      defaultValue={catalogSelectOptions[0]}
+      options={catalogSelectOptions}
       styles={customStyles}
       theme={theme => ({
         ...theme,
@@ -52,3 +51,4 @@ const SelectCatalog = () => {
 }
 
 export default SelectCatalog
+

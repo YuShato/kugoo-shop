@@ -8,11 +8,11 @@ export interface IBenefit {
 export interface IImage  {
     id: number
     isSpecial: boolean
-    title: string | null
-    subtitle: string | null
-    infoBtn: string  | null
-    action: string | null
-    src: string | null
+    title?: string
+    subtitle?: string
+    infoBtn?: string 
+    action?: string 
+    src?: string 
 }
 
 export interface IBlock {
@@ -43,7 +43,7 @@ export interface ISocialLink {
 export interface ICatalogInfo {
     link: string
     name_ru: string
-    icon: JSX.Element |  null
+    icon?: JSX.Element 
 }
 
 export interface IMenuLink {
@@ -57,3 +57,17 @@ export interface ICatalogOption {
     value: string
     label: string
 }
+
+export interface SelectOption {
+    readonly value: string;
+    readonly label: string;
+    readonly isFixed?: boolean;
+    readonly isDisabled?: boolean;
+  }
+
+  export  interface IUserBlock {
+    link: string
+    icon: JSX.Element
+    info: string
+    text_ru: string
+  }

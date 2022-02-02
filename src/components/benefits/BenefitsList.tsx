@@ -12,7 +12,7 @@ const BenefitsList: FC<BenefitsListProps> = ({ benefitsList }) => {
   return (
     <BenefitsWrapper>
       <ul>
-        {benefitsList.map((benefit, index) => (
+        {benefitsList.map((benefit:IBenefit, index:number) => (
           <BenefitsItem key={index} {...benefit} />
         ))}
       </ul>

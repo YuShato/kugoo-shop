@@ -27,7 +27,7 @@ const Slider:FC<ImagesListProps> = ({images}) => {
           if (mouseOver) return
           timeout = setTimeout(() => {
             slider.next()
-          }, 7000)
+          }, 30000)
         }
         slider.on('created', () => {
           slider.container.addEventListener('mouseover', () => {
