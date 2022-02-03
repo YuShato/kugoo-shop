@@ -1,56 +1,41 @@
-import { FC } from 'react'
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-import { ICatalogInfo } from '../types/types'
+import { FC } from "react";
+import styled from "styled-components";
+import { ICatalogInfo } from "../types/types";
+import ModalList from "./ModalList";
+import ModalTypeList from "./ModalTypeList";
 
 interface CatalogModalProps {
   catalogInfoArray: {
-    types: ICatalogInfo[]
-    special: ICatalogInfo[]
-    prescription: ICatalogInfo[]
-  }
+    types: ICatalogInfo[];
+    special: ICatalogInfo[];
+    prescription: ICatalogInfo[];
+  };
 }
 
-const CatalogModal:FC<CatalogModalProps> = ({catalogInfoArray}) => {
+const CatalogModal: FC<CatalogModalProps> = ({ catalogInfoArray }) => {
   return (
-    <CatalogModalWrapper  className='visually-hidden'>
-      <ul className='type'>
-        {catalogInfoArray.types.map((type:ICatalogInfo, index:number) => {
-          const { link, name_ru, icon } = type
-          return (
-            <li key={index} className='type__item'>
-              {icon}
-              <Link to={link}>{name_ru}</Link>
-            </li>
-          )
-        })}
-      </ul>
-      <ul className='special'>
-        {catalogInfoArray.special.map((special:ICatalogInfo, index:number) => {
-          const { link, name_ru } = special
-          return (
-            <li key={index} className='special__item'>
-              <Link to={link}>{name_ru}</Link>
-            </li>
-          )
-        })}
-      </ul>
-      <ul className='prescription'>
-        {catalogInfoArray.prescription.map((prescription:ICatalogInfo, index:number) => {
-          const { link, name_ru } = prescription
-          return (
-            <li key={index} className='prescription__item'>
-              <Link to={link}>{name_ru}</Link>
-            </li>
-          )
-        })}
-      </ul>
+    <CatalogModalWrapper className="visually-hidden">
+      <ModalTypeList array={catalogInfoArray.types} />
+      <ModalList title="Особенности" array={catalogInfoArray.special} />
+      <ModalList title="Для кого" array={catalogInfoArray.prescription} />
     </CatalogModalWrapper>
-  )
-}
+  );
+};
 
 const CatalogModalWrapper = styled.div`
   display: flex;
-`
+  position: absolute;
+  gap: 43px;
+  z-index: 5;
+  width: 100%;
+  max-width: 650px;
+  padding: 10px;
+  background-color: var(--clr-primary-5);
+  height: auto;
+  box-shadow: 0px 10px 30px rgba(111, 115, 238, 0.1);
+  border-radius: 5px;
+  top: 100%;
+  left: 15%;
+`;
 
-export default CatalogModal
+export default CatalogModal;
