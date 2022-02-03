@@ -2,6 +2,7 @@ import { FC } from "react";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import styled from "styled-components";
 import { IPhoneNumber } from "../types/types";
+import PhoneModal from "./PhoneModal";
 
 interface PhoneProps {
   phoneNumberArray: IPhoneNumber[];
@@ -19,23 +20,13 @@ const Phone: FC<PhoneProps> = ({ phoneNumberArray }) => {
       <button className="phone-btn" type="button" onClick={showPhoneModal}>
         <AiOutlinePlusCircle />
       </button>
-      <ul className="phone visually-hidden">
-        {phoneNumberArray.map((phoneNumber: IPhoneNumber, index: number) => {
-          const { phone, info, time } = phoneNumber;
-          return (
-            <div key={index}>
-              <p>{info}</p>
-              <a href={`tel:${phone}`}>{phone}</a>
-              {time && <p>{time}</p>}
-            </div>
-          );
-        })}
-      </ul>
+      <PhoneModal phoneNumberArray={phoneNumberArray} />
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
+position: relative;
   display: flex;
   gap: 10px;
   margin-left: auto;
