@@ -1,14 +1,14 @@
-import {FC} from 'react'
-import styled from 'styled-components'
-import { IImage } from '../types/types'
-import SliderImage from './SliderImage'
-import SliderFreeBtn from './SliderFreeBtn'
-import SliderTitle from './SliderTitle'
-import BannerBtn from './BannerBtn'
-import SliderBtn from './SliderBtn'
+import { FC } from "react";
+import styled from "styled-components";
+import { IImage } from "../types/types";
+import SliderImage from "./SliderImage";
+import SliderFreeBtn from "./SliderFreeBtn";
+import SliderTitle from "./SliderTitle";
+import BannerBtn from "./BannerBtn";
+import SliderBtn from "./SliderBtn";
 
 const SlideItem: FC<IImage> = ({ ...image }) => {
-  const { id, isSpecial } = image
+  const { id, isSpecial } = image;
   return isSpecial ? (
     <Slide className={`keen-slider__slide number-slide${id} slide`}>
       <SliderTitle {...image} />
@@ -21,14 +21,14 @@ const SlideItem: FC<IImage> = ({ ...image }) => {
     <Slide className={`keen-slider__slide number-slide${id} slide`}>
       <SliderImage {...image} />
     </Slide>
-  )
-}
+  );
+};
 
 const Slide = styled.div`
   position: relative;
 
-  [class^='number-slide'],
-  [class*=' number-slide'] {
+  [class^="number-slide"],
+  [class*=" number-slide"] {
     background: grey;
     display: flex;
     align-items: center;
@@ -107,6 +107,6 @@ const Slide = styled.div`
       rgba(174, 63, 255, 0.8) 100%
     );
   }
-`
+`;
 
-export default SlideItem
+export default SlideItem;

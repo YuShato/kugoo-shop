@@ -1,7 +1,7 @@
-import { FC } from 'react';
+import { FC } from "react";
 
-const ContactsPage:FC = () => {
+const ContactsPage: FC = () => {
   return <div>Контакты</div>;
-}
+};
 
 export default ContactsPage;

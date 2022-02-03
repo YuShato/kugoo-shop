@@ -1,13 +1,13 @@
-import styled from 'styled-components'
-import { Link } from 'react-router-dom'
-import { PageRoute } from '../../consts/consts'
-import { FC } from 'react'
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { PageRoute } from "../../consts/consts";
+import { FC } from "react";
 
-const SliderFreeBtn:FC = () => {
+const SliderFreeBtn: FC = () => {
   return (
     <Wrapper to={PageRoute.actions.route}>⚡Тест-драйв и обучение</Wrapper>
-  )
-}
+  );
+};
 
 const Wrapper = styled(Link)`
   display: block;
@@ -26,7 +26,7 @@ const Wrapper = styled(Link)`
   z-index: 4;
 
   &::after {
-    content: 'Бесплатно';
+    content: "Бесплатно";
     text-transform: uppercase;
     padding: 5px 10px;
     position: absolute;
@@ -36,6 +36,6 @@ const Wrapper = styled(Link)`
     color: var(--clr-primary-1);
     border-radius: 5px;
   }
-`
+`;
 
-export default SliderFreeBtn
+export default SliderFreeBtn;

@@ -1,57 +1,61 @@
-import { FC } from 'react'
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-import DefaultLink from '../common/DefaultLink'
-import NavButton from '../common/NavButton'
-import { IConnectionLink, ISocialLink, IPhoneNumber } from '../types/types';
-import Phone from './Phone'
+import { FC } from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import DefaultLink from "../common/DefaultLink";
+import NavButton from "../common/NavButton";
+import { IConnectionLink, ISocialLink, IPhoneNumber } from "../types/types";
+import Phone from "./Phone";
 
-interface  ConnectProps {
-  phoneNumberArray: IPhoneNumber[]
-  connectLinkArray: IConnectionLink[]
-  socialLinkArray: ISocialLink[]
+interface ConnectProps {
+  phoneNumberArray: IPhoneNumber[];
+  connectLinkArray: IConnectionLink[];
+  socialLinkArray: ISocialLink[];
 }
 
 const showContactsModal = (evt: { preventDefault: () => void }) => {
-  evt.preventDefault()
-  console.log('contacts modal open')
-}
+  evt.preventDefault();
+  console.log("contacts modal open");
+};
 
-const Connect:FC<ConnectProps> = ({phoneNumberArray, connectLinkArray, socialLinkArray}) => {
+const Connect: FC<ConnectProps> = ({
+  phoneNumberArray,
+  connectLinkArray,
+  socialLinkArray,
+}) => {
   return (
-    <ConnectWrapper className='connect'>
-      <div className='container'>
-        <ul className='connect__list connect'>
-          {connectLinkArray.map((link:IConnectionLink, index:number) => {
-            const { route, text_ru } = link
+    <ConnectWrapper className="connect">
+      <div className="container">
+        <ul className="connect__list connect">
+          {connectLinkArray.map((link: IConnectionLink, index: number) => {
+            const { route, text_ru } = link;
             return (
-              <li key={index} className='connect__item'>
+              <li key={index} className="connect__item">
                 <DefaultLink href={route} text={text_ru} />
               </li>
-            )
+            );
           })}
           <NavButton
-            text={'Заказать звонок'}
+            text={"Заказать звонок"}
             onClickHandler={showContactsModal}
           />
         </ul>
-        <ul className='connect__social social'>
-          {socialLinkArray.map((socialLink:ISocialLink, index:number) => {
-            const { route, text_ru, icon } = socialLink
+        <ul className="connect__social social">
+          {socialLinkArray.map((socialLink: ISocialLink, index: number) => {
+            const { route, text_ru, icon } = socialLink;
             return (
-              <li key={index} className='social__link'>
+              <li key={index} className="social__link">
                 <Link to={route} aria-label={text_ru}>
                   {icon}
                 </Link>
               </li>
-            )
+            );
           })}
         </ul>
         <Phone phoneNumberArray={phoneNumberArray} />
       </div>
     </ConnectWrapper>
-  )
-}
+  );
+};
 
 const ConnectWrapper = styled.div`
   width: 100%;
@@ -95,6 +99,6 @@ const ConnectWrapper = styled.div`
   .social__link:nth-of-type(3) a:hover {
     color: var(--viber);
   }
-`
+`;
 
-export default Connect
+export default Connect;

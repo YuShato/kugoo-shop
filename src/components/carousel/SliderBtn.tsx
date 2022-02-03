@@ -1,13 +1,12 @@
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-import { PageRoute } from '../../consts/consts'
-import { IImage } from '../types/types'
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import { PageRoute } from "../../consts/consts";
+import { IImage } from "../types/types";
 
-
-const SliderBtn = ( { ...image }:IImage) => {
-  const {action} = image 
-  return <Wrapper to={PageRoute.products.route}>{action}</Wrapper>
-}
+const SliderBtn = ({ ...image }: IImage) => {
+  const { action } = image;
+  return <Wrapper to={PageRoute.products.route}>{action}</Wrapper>;
+};
 
 const Wrapper = styled(Link)`
   background-color: var(--clr-primary-5);
@@ -30,6 +29,6 @@ const Wrapper = styled(Link)`
     background-color: transparent;
     border: 1px solid var(--clr-primary-5);
   }
-`
+`;
 
-export default SliderBtn
+export default SliderBtn;

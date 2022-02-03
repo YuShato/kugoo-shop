@@ -1,26 +1,22 @@
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-import { PageRoute } from '../../consts/consts'
-import { IImage } from '../types/types'
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import { PageRoute } from "../../consts/consts";
+import { IImage } from "../types/types";
 
-const SliderImage = ({...image }:IImage) => {
-  const { isSpecial, title, id } = image
+const SliderImage = ({ ...image }: IImage) => {
+  const { isSpecial, title, id } = image;
   return isSpecial ? (
     <ImageWrapper>
-      <img
-        className='banner'
-        src={`../../assets/img/${id}.png`}
-        alt={title}
-      />
+      <img className="banner" src={`../../assets/img/${id}.png`} alt={title} />
     </ImageWrapper>
   ) : (
-    <ImageWrapper className='special'>
+    <ImageWrapper className="special">
       <Link to={PageRoute.products.route}>
         <img alt={title} src={`../../assets/img/${id}.jpg`} />
       </Link>
     </ImageWrapper>
-  )
-}
+  );
+};
 
 const ImageWrapper = styled.div`
   .banner {
@@ -44,6 +40,6 @@ const ImageWrapper = styled.div`
       object-fit: cover;
     }
   }
-`
+`;
 
-export default SliderImage
+export default SliderImage;

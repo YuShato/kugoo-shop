@@ -1,33 +1,33 @@
-import styled from 'styled-components'
-import { AiOutlineSearch } from 'react-icons/ai'
-import DefaultButton from '../common/DefaultButton'
-import SelectCatalog from './SelectCatalog'
-import { ICatalogOption } from '../types/types';
-import { FC } from 'react';
+import styled from "styled-components";
+import { AiOutlineSearch } from "react-icons/ai";
+import DefaultButton from "../common/DefaultButton";
+import SelectCatalog from "./SelectCatalog";
+import { ICatalogOption } from "../types/types";
+import { FC } from "react";
 
 interface SearchFormProps {
-  catalogSelectOptions: ICatalogOption[]
+  catalogSelectOptions: ICatalogOption[];
 }
 
 const searchData = (evt: { preventDefault: () => void }) => {
-  evt.preventDefault()
-  console.log('search form ')
-}
+  evt.preventDefault();
+  console.log("search form ");
+};
 
-const SearchForm:FC<SearchFormProps> = ({catalogSelectOptions}) => {
+const SearchForm: FC<SearchFormProps> = ({ catalogSelectOptions }) => {
   return (
     <SearchWrapper>
-      <SelectCatalog catalogSelectOptions={catalogSelectOptions}/>
-      <input type='text' name='text' placeholder='Искать самокат KUGO' />
+      <SelectCatalog catalogSelectOptions={catalogSelectOptions} />
+      <input type="text" name="text" placeholder="Искать самокат KUGO" />
       <DefaultButton
         icon={<AiOutlineSearch />}
-        aria-label='искать по запросу'
-        onClickHandler={searchData} 
+        aria-label="искать по запросу"
+        onClickHandler={searchData}
         title={undefined}
       />
     </SearchWrapper>
-  )
-}
+  );
+};
 
 const SearchWrapper = styled.div`
   display: flex;
@@ -51,6 +51,6 @@ const SearchWrapper = styled.div`
     width: 16px;
     height: 16px;
   }
-`
+`;
 
-export default SearchForm
+export default SearchForm;

@@ -1,16 +1,16 @@
-import styled from 'styled-components'
-import { IImage } from '../types/types'
+import styled from "styled-components";
+import { IImage } from "../types/types";
 
-const SliderTitle = ({...image}:IImage) => {
-  const { title, subtitle } = image
-  
+const SliderTitle = ({ ...image }: IImage) => {
+  const { title, subtitle } = image;
+
   return (
     <TitleWrapper>
       <h4>{title}</h4>
       <span>{subtitle}</span>
     </TitleWrapper>
-  )
-}
+  );
+};
 
 const TitleWrapper = styled.div`
   color: var(--clr-primary-5);
@@ -33,6 +33,6 @@ const TitleWrapper = styled.div`
     line-height: 29px;
     max-width: 450px;
   }
-`
+`;
 
-export default SliderTitle
+export default SliderTitle;

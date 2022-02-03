@@ -1,15 +1,23 @@
-import { FC } from 'react'
-import styled from 'styled-components'
+import { FC } from "react";
+import styled from "styled-components";
 
 interface DefaultButtonProps {
-  title?: string
-  icon?: JSX.Element 
-  onClickHandler: React.MouseEventHandler<HTMLButtonElement> | undefined
+  title?: string;
+  icon?: JSX.Element;
+  onClickHandler: React.MouseEventHandler<HTMLButtonElement> | undefined;
 }
 
-const DefaultButton:FC<DefaultButtonProps> = ({ onClickHandler, title, icon}) => {
-  return <Wrapper onClick={onClickHandler}>{icon ? icon : null} {title}</Wrapper>
-}
+const DefaultButton: FC<DefaultButtonProps> = ({
+  onClickHandler,
+  title,
+  icon,
+}) => {
+  return (
+    <Wrapper onClick={onClickHandler}>
+      {icon ? icon : null} {title}
+    </Wrapper>
+  );
+};
 
 const Wrapper = styled.button`
   color: var(--clr-primary-5);
@@ -30,6 +38,6 @@ const Wrapper = styled.button`
     width: 13px;
     height: 13px;
   }
-`
+`;
 
-export default DefaultButton
+export default DefaultButton;

@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import styled from "styled-components";
 import DefaultButton from "../common/DefaultButton";
 import { VscListSelection } from "react-icons/vsc";

@@ -1,18 +1,18 @@
-import { FC } from 'react'
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-import { PageRoute } from '../../consts/consts'
+import { FC } from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import { PageRoute } from "../../consts/consts";
 
-const Logo:FC = () => {
+const Logo: FC = () => {
   return (
     <Wrapper
       to={PageRoute.main.route}
-      aria-label='вернуться на главную  страницу'
+      aria-label="вернуться на главную  страницу"
     >
       KUGOO
     </Wrapper>
-  )
-}
+  );
+};
 
 const Wrapper = styled(Link)`
   font-weight: bold;
@@ -26,6 +26,6 @@ const Wrapper = styled(Link)`
   &:hover {
     color: var(--clr-primary-8);
   }
-`
+`;
 
-export default Logo
+export default Logo;

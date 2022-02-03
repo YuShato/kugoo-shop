@@ -1,27 +1,27 @@
-import React, {FC} from 'react'
-import styled from 'styled-components'
-import yandex from '../../assets/img/svg/yandex.svg'
-import star from '../../assets/img/svg/star.svg'
+import { FC } from "react";
+import styled from "styled-components";
+import yandex from "../../assets/img/svg/yandex.svg";
+import star from "../../assets/img/svg/star.svg";
 
-const Rating:FC = () => {
+const Rating: FC = () => {
   return (
     <Wrapper>
-        {/* сделать ссылкой на  сайт яндекса, с запросом с API */}
+      {/* сделать ссылкой на  сайт яндекса, с запросом с API */}
       <img
-        className='logo'
+        className="logo"
         src={yandex}
-        alt='логотип компании Яндекс'
+        alt="логотип компании Яндекс"
         width={56}
         height={56}
       />
       <p>Яндекс&nbsp;отзывы</p>
-      <div className='rating'>
-        <img src={star} alt='рейтинг' width={14} height={14} />
+      <div className="rating">
+        <img src={star} alt="рейтинг" width={14} height={14} />
         <h4>4,9</h4>
       </div>
     </Wrapper>
-  )
-}
+  );
+};
 
 const Wrapper = styled.div`
   width: 190px;
@@ -53,7 +53,7 @@ const Wrapper = styled.div`
   }
 
   .rating {
-      margin-top: -10px;
+    margin-top: -10px;
     grid-column: 2/4;
     align-self: center;
     padding-bottom: 5px;
@@ -65,6 +65,6 @@ const Wrapper = styled.div`
     align-self: center;
     margin-top: 7px;
   }
-`
+`;
 
-export default Rating
+export default Rating;

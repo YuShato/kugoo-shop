@@ -1,34 +1,34 @@
-import { FC } from 'react'
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-import InfoBtn from '../common/InfoBtn'
-import { IMenuLink } from '../types/types'
+import { FC } from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import InfoBtn from "../common/InfoBtn";
+import { IMenuLink } from "../types/types";
 
-interface  NavbarProps {
-  menuLinkArray:IMenuLink[]
+interface NavbarProps {
+  menuLinkArray: IMenuLink[];
 }
 
-const Navbar:FC<NavbarProps>= ({menuLinkArray})  => {
+const Navbar: FC<NavbarProps> = ({ menuLinkArray }) => {
   return (
-    <NavContainer className='nav'>
-      <div className='container'>
+    <NavContainer className="nav">
+      <div className="container">
         <ul>
-          {menuLinkArray.map((item:IMenuLink, index:number) => {
-            const { route, text_ru, info, icon } = item
+          {menuLinkArray.map((item: IMenuLink, index: number) => {
+            const { route, text_ru, info, icon } = item;
             return (
               <li key={index}>
-                <Link className='nav__link' to={route}>
+                <Link className="nav__link" to={route}>
                   {icon ? icon : null} {text_ru}
                 </Link>
                 {info && <InfoBtn title={info} />}
               </li>
-            )
+            );
           })}
         </ul>
       </div>
     </NavContainer>
-  )
-}
+  );
+};
 
 const NavContainer = styled.nav`
   height: min-content;
@@ -57,6 +57,6 @@ const NavContainer = styled.nav`
     color: var(--clr-primary-1);
     transition: var(--transition);
   }
-`
+`;
 
-export default Navbar
+export default Navbar;

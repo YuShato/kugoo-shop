@@ -1,7 +1,7 @@
-import { FC } from 'react';
+import { FC } from "react";
 
-const PartnershipPage:FC = () => {
+const PartnershipPage: FC = () => {
   return <div>Сотрудничество</div>;
-}
+};
 
 export default PartnershipPage;

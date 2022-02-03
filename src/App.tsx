@@ -1,6 +1,6 @@
-import React, { FC } from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Header from './components/header'
+import { FC } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Header from "./components/header";
 import {
   About,
   Contacts,
@@ -12,13 +12,13 @@ import {
   Shipping,
   TestDrive,
   Error,
-  AuthWrapper
-} from './pages'
-import Footer from './components/Footer'
-import HomePage from './pages/HomePage.tsx'
-import { PageRoute } from './consts/consts'
+  AuthWrapper,
+} from "./pages";
+import Footer from "./components/Footer";
+import { PageRoute } from "./consts/consts";
+import HomePage from "./pages/HomePage";
 
-const App:FC = () => {
+const App: FC = () => {
   return (
     <AuthWrapper>
       <Router>
@@ -54,14 +54,14 @@ const App:FC = () => {
           <Route path={PageRoute.testDrive.route} exact>
             <TestDrive />
           </Route>
-          <Route path='*'>
+          <Route path="*">
             <Error />
           </Route>
         </Switch>
         <Footer />
       </Router>
     </AuthWrapper>
-  )
-}
+  );
+};
 
-export default App
+export default App;

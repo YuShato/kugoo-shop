@@ -1,13 +1,13 @@
-import { FC } from 'react'
-import styled from 'styled-components'
+import { FC } from "react";
+import styled from "styled-components";
 
 interface InfoBtnProps {
-  title: string
+  title: string;
 }
 
-const InfoBtn:FC<InfoBtnProps> = ({ title }) => {
-  return <InfoBtnWrapper>{title}</InfoBtnWrapper>
-}
+const InfoBtn: FC<InfoBtnProps> = ({ title }) => {
+  return <InfoBtnWrapper>{title}</InfoBtnWrapper>;
+};
 
 const InfoBtnWrapper = styled.button`
   border-radius: 300px;
@@ -23,6 +23,6 @@ const InfoBtnWrapper = styled.button`
   &:hover {
     opacity: 0.8;
   }
-`
+`;
 
-export default InfoBtn
+export default InfoBtn;

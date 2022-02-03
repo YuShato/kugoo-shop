@@ -1,7 +1,7 @@
-import { FC } from 'react';
+import { FC } from "react";
 
-const ServicePage:FC = () => {
+const ServicePage: FC = () => {
   return <div>Сервис</div>;
-}
+};
 
 export default ServicePage;

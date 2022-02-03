@@ -1,11 +1,11 @@
-import  { FC } from 'react'
-import styled from 'styled-components'
-import { IImage } from '../types/types'
+import { FC } from "react";
+import styled from "styled-components";
+import { IImage } from "../types/types";
 
-const BannerBtn:FC<IImage> = ({ ...image }) => {
-  const { infoBtn } = image
-  return <Wrapper>{infoBtn}</Wrapper>
-}
+const BannerBtn: FC<IImage> = ({ ...image }) => {
+  const { infoBtn } = image;
+  return <Wrapper>{infoBtn}</Wrapper>;
+};
 
 const Wrapper = styled.button`
   color: var(--clr-primary-5);
@@ -18,6 +18,6 @@ const Wrapper = styled.button`
   padding: 3px 11px;
   font-size: 14px;
   line-height: 20px;
-`
+`;
 
-export default BannerBtn
+export default BannerBtn;

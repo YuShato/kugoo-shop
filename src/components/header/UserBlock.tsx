@@ -1,30 +1,30 @@
-import { FC } from 'react'
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-import { IUserBlock } from '../types/types'
+import { FC } from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import { IUserBlock } from "../types/types";
 
 interface UserBlockProps {
-  userBlockData: IUserBlock[]
+  userBlockData: IUserBlock[];
 }
 
-const UserBlock:FC<UserBlockProps> = ({userBlockData}) => {
+const UserBlock: FC<UserBlockProps> = ({ userBlockData }) => {
   return (
-    <Wrapper className='user'>
-      {userBlockData.map((item:IUserBlock, index:number) => {
-        const { link, icon, info, text_ru } = item
+    <Wrapper className="user">
+      {userBlockData.map((item: IUserBlock, index: number) => {
+        const { link, icon, info, text_ru } = item;
 
         return (
           <li key={index}>
-            <Link className='user__link' to={link} aria-label={info}>
+            <Link className="user__link" to={link} aria-label={info}>
               {icon}
-              {text_ru && <span className='user__text'>{text_ru}</span>}
+              {text_ru && <span className="user__text">{text_ru}</span>}
             </Link>
           </li>
-        )
+        );
       })}
     </Wrapper>
-  )
-}
+  );
+};
 
 const Wrapper = styled.ul`
   display: flex;
@@ -47,6 +47,6 @@ const Wrapper = styled.ul`
       transition: var(--transition);
     }
   }
-`
+`;
 
-export default UserBlock
+export default UserBlock;

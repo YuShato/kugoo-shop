@@ -1,21 +1,25 @@
-import { FC } from 'react'
-import { NavLink } from 'react-router-dom'
-import styled from 'styled-components'
+import { FC } from "react";
+import { NavLink } from "react-router-dom";
+import styled from "styled-components";
 
 interface DefaultLinkProps {
-  href: string
-  text: string
-  icon?: JSX.Element
+  href: string;
+  text: string;
+  icon?: JSX.Element;
 }
 
-const DefaultLink:FC<DefaultLinkProps> = ({ href, text, icon=undefined }) => {
+const DefaultLink: FC<DefaultLinkProps> = ({
+  href,
+  text,
+  icon = undefined,
+}) => {
   return (
     <DefaultLinkWrapper to={href}>
       {icon ? icon : null}
       {text}
     </DefaultLinkWrapper>
-  )
-}
+  );
+};
 
 const DefaultLinkWrapper = styled(NavLink)`
   text-decoration: none;
@@ -27,6 +31,6 @@ const DefaultLinkWrapper = styled(NavLink)`
   &:hover {
     color: var(--clr-primary-10);
   }
-`
+`;
 
-export default DefaultLink
+export default DefaultLink;

@@ -1,25 +1,25 @@
-import { RiScalesLine, RiShoppingBasket2Line } from 'react-icons/ri'
-import { MdFavoriteBorder } from 'react-icons/md'
+import { RiScalesLine, RiShoppingBasket2Line } from "react-icons/ri";
+import { MdFavoriteBorder } from "react-icons/md";
 
 const UserBlockData = [
   {
-    link: '/compare',
+    link: "/compare",
     icon: <RiScalesLine />,
-    info: 'список сравнения',
-    text_ru: null
+    info: "список сравнения",
+    text_ru: null,
   },
   {
-    link: '/favorites',
+    link: "/favorites",
     icon: <MdFavoriteBorder />,
-    info: 'избранное',
-    text_ru: null
+    info: "избранное",
+    text_ru: null,
   },
   {
-    link: '/cart',
+    link: "/cart",
     icon: <RiShoppingBasket2Line />,
-    info: 'корзина',
-    text_ru: 'Корзина'
-  }
-]
+    info: "корзина",
+    text_ru: "Корзина",
+  },
+];
 
-export { UserBlockData }
+export { UserBlockData };

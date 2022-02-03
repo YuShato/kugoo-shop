@@ -1,39 +1,39 @@
-import { FC } from 'react'
-import { AiOutlinePlusCircle } from 'react-icons/ai'
-import styled from 'styled-components'
-import { IPhoneNumber } from '../types/types'
+import { FC } from "react";
+import { AiOutlinePlusCircle } from "react-icons/ai";
+import styled from "styled-components";
+import { IPhoneNumber } from "../types/types";
 
 interface PhoneProps {
-  phoneNumberArray: IPhoneNumber[]
+  phoneNumberArray: IPhoneNumber[];
 }
 
 const showPhoneModal = (evt: { preventDefault: () => void }) => {
-  evt.preventDefault()
-  console.log('modal phone open')
-}
+  evt.preventDefault();
+  console.log("modal phone open");
+};
 
-const  Phone:FC<PhoneProps> = ({phoneNumberArray}) => {
+const Phone: FC<PhoneProps> = ({ phoneNumberArray }) => {
   return (
     <Wrapper>
-      <a href='tel:+7 (800) 505-54-61'>+7 (800) 505-54-61</a>
-      <button className='phone-btn' type='button' onClick={showPhoneModal}>
+      <a href="tel:+7 (800) 505-54-61">+7 (800) 505-54-61</a>
+      <button className="phone-btn" type="button" onClick={showPhoneModal}>
         <AiOutlinePlusCircle />
       </button>
-      <ul className='phone visually-hidden'>
-        {phoneNumberArray.map((phoneNumber:IPhoneNumber, index:number) => {
-          const { phone, info, time } = phoneNumber
+      <ul className="phone visually-hidden">
+        {phoneNumberArray.map((phoneNumber: IPhoneNumber, index: number) => {
+          const { phone, info, time } = phoneNumber;
           return (
             <div key={index}>
               <p>{info}</p>
               <a href={`tel:${phone}`}>{phone}</a>
               {time && <p>{time}</p>}
             </div>
-          )
+          );
         })}
       </ul>
     </Wrapper>
-  )
-}
+  );
+};
 
 const Wrapper = styled.div`
   display: flex;
@@ -76,6 +76,6 @@ const Wrapper = styled.div`
       color: var(--clr-primary-5);
     }
   }
-`
+`;
 
-export default Phone
+export default Phone;
