@@ -145,7 +145,10 @@ const PhoneNumberArray = [
   },
 ];
 
+const MAX_PRODUCTS_LENGTH = 8;
+
 export {
+  MAX_PRODUCTS_LENGTH,
   PageRoute,
   LinkType,
   MenuLinkArray,

@@ -15,6 +15,7 @@ const Title = styled.h3`
   line-height: 51px;
   text-transform: uppercase;
   color: var(--clr-primary-2);
+  word-break: break-word;
 `;
 
 export default DefaultTitle;

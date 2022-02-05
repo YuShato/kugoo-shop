@@ -58,6 +58,23 @@ export interface ICatalogOption {
   label: string;
 }
 
+export interface ICard {
+  title: string;
+  isHit: boolean;
+  isNew: boolean;
+  isCompare: boolean;
+  isFavorite: boolean;
+  oldPrice: number;
+  currentPrice: number;
+  isOnCart: boolean;
+  params: {
+    accamulator: number;
+    speed: number;
+    power: number;
+    time: number;
+  };
+}
+
 export interface SelectOption {
   readonly value: string;
   readonly label: string;
