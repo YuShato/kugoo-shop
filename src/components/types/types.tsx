@@ -73,6 +73,9 @@ export interface ICard {
     power: number;
     time: number;
   };
+  city: boolean;
+  adults: boolean;
+  kids: boolean;
 }
 
 export interface SelectOption {
@@ -93,4 +96,10 @@ export interface IFilter {
   name: string;
   value: string;
   isActive: boolean;
+}
+
+export interface IAction {
+  id: number;
+  title: string;
+  offer: string;
 }

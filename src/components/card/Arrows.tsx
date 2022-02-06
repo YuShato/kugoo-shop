@@ -15,10 +15,18 @@ const showNextImage = (evt: { preventDefault: () => void }) => {
 const Arrows: FC = () => {
   return (
     <ArrowsWrapper>
-      <button className="arrow-btn" onClick={showPrevImage} title="предыдущее фото">
+      <button
+        className="arrow-btn"
+        onClick={showPrevImage}
+        title="предыдущее фото"
+      >
         <IoIosArrowBack />
       </button>
-      <button className="arrow-btn" onClick={showNextImage} title="следующее фото">
+      <button
+        className="arrow-btn"
+        onClick={showNextImage}
+        title="следующее фото"
+      >
         <IoIosArrowForward />
       </button>
     </ArrowsWrapper>
@@ -43,13 +51,19 @@ const ArrowsWrapper = styled.div`
     border: none;
     opacity: 0;
     transition: var(--transition);
+    color: var(--clr-primary-1);
 
-    &:hover svg {
-      fill: var(--clr-primary-1);
+    &:hover,
+    &:focus {
+      background-color: var(--clr-primary-1);
+    }
+
+    &:hover svg,
+    &:focus svg {
+      fill: var(--clr-primary-5);
       transition: var(--transition);
     }
   }
-
 `;
 
 export default Arrows;

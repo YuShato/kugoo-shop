@@ -6,10 +6,9 @@ import DefaultTitle from "../common/DefaultTitle";
 import ProductFilters from "../products/Filters";
 import { ICard } from "../types/types";
 import CardItem from "./CardItem";
+import MoreBtn from '../products/MoreBtn';
 
-type Props = {};
-
-const CardWrapper = (props: Props) => {
+const CardWrapper = () => {
   return (
     <Container>
       <div className="container">
@@ -23,6 +22,9 @@ const CardWrapper = (props: Props) => {
             <CardItem card={card} key={index} />
           ))}
       </Wrapper>
+      <div className="container">
+        <MoreBtn/>
+      </div>
     </Container>
   );
 };
