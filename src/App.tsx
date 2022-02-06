@@ -15,7 +15,7 @@ import {
   AuthWrapper,
 } from "./pages";
 import Footer from "./components/Footer";
-import { PageRoute } from "./consts/consts";
+import { PageRoute } from "./consts/menu";
 import HomePage from "./pages/HomePage";
 
 const App: FC = () => {

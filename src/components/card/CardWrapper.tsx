@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import { MAX_PRODUCTS_LENGTH } from "../../consts/consts";
+import { filters } from "../../consts/filters";
 import mockCards from "../../consts/mockData";
 import DefaultTitle from "../common/DefaultTitle";
+import ProductFilters from "../products/Filters";
 import { ICard } from "../types/types";
 import CardItem from "./CardItem";
 
@@ -12,11 +14,14 @@ const CardWrapper = (props: Props) => {
     <Container>
       <div className="container">
         <DefaultTitle title="Электросамокаты" />
+        <ProductFilters filters={filters} />
       </div>
       <Wrapper>
-        {mockCards.slice(0, MAX_PRODUCTS_LENGTH).map((card: ICard, index: number) => (
-          <CardItem card={card} key={index} />
-        ))}
+        {mockCards
+          .slice(0, MAX_PRODUCTS_LENGTH)
+          .map((card: ICard, index: number) => (
+            <CardItem card={card} key={index} />
+          ))}
       </Wrapper>
     </Container>
   );

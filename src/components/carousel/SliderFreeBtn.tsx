@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { PageRoute } from "../../consts/consts";
+import { PageRoute } from "../../consts/menu";
 import { FC } from "react";
 
 const SliderFreeBtn: FC = () => {

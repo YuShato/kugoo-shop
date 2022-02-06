@@ -6,7 +6,7 @@ import {
   MenuLinkArray,
   PhoneNumberArray,
   SocialLinkArray,
-} from "../../consts/consts";
+} from "../../consts/menu";
 import {
   ICatalogInfo,
   ICatalogOption,

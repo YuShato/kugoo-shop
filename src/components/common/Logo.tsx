@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { PageRoute } from "../../consts/consts";
+import { PageRoute } from "../../consts/menu";
 
 const Logo: FC = () => {
   return (

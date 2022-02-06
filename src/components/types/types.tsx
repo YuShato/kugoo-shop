@@ -88,3 +88,9 @@ export interface IUserBlock {
   info: string;
   text_ru?: string | null;
 }
+
+export interface IFilter {
+  name: string;
+  value: string;
+  isActive: boolean;
+}

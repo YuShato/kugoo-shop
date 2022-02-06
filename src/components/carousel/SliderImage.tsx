@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { PageRoute } from "../../consts/consts";
+import { PageRoute } from "../../consts/menu";
 import { IImage } from "../types/types";
 
 const SliderImage = ({ ...image }: IImage) => {

@@ -1,19 +1,24 @@
 import { FC } from "react";
 import styled from "styled-components";
+import { IFilter } from "../types/types";
 
 interface Props {
-  text: string;
-  isActive: boolean;
+  filter: IFilter;
 }
 
-const FilterButton: FC<Props> = ({ text, isActive = false }) => {
-  return <Button className={`${isActive ? "active" : null}`}>{text}</Button>;
+const FilterButton: FC<Props> = ({ filter }) => {
+  const { name, isActive, value } = filter;
+  return (
+    <Button data-value={value} className={`${isActive ? "active" : null}`}>
+      {name}
+    </Button>
+  );
 };
 
 const Button = styled.button`
   background: var(--clr-primary-4);
   border-radius: 5px;
-  padding: 10px 20px;
+  padding: 8px 20px;
   font-size: 12px;
   line-height: 17px;
   text-transform: capitalize;
@@ -23,12 +28,12 @@ const Button = styled.button`
   border: 1px solid var(--clr-primary-4);
   transition: var(--transition);
 
-  .active,
+  &.active,
   &:hover,
   &:focus {
     color: var(--clr-primary-1);
     background-color: var(--clr-primary-5);
-    border: 1px solid var(--clr-primary-1);
+    border: 1.3px solid var(--clr-primary-1);
   }
 `;
 
