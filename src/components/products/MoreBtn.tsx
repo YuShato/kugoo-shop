@@ -1,13 +1,12 @@
-import { FC } from "react";
+import { FC, MouseEventHandler } from "react";
 import styled from "styled-components";
 
-const showMore = (evt: { preventDefault: () => void }) => {
-  evt.preventDefault();
-  console.log("show more");
-};
+interface Props {
+  onClickHandler: MouseEventHandler<HTMLButtonElement> | undefined
+}
 
-const MoreBtn: FC = () => {
-  return <Button onClick={showMore}>Смотреть все</Button>;
+const MoreBtn: FC<Props> = ({onClickHandler}) => {
+  return <Button onClick={onClickHandler}>Смотреть все</Button>;
 };
 
 const Button = styled.button`
@@ -17,7 +16,7 @@ const Button = styled.button`
   box-sizing: border-box;
   border-radius: 5px;
   padding: 15px 25px;
-  margin: 50px auto;
+  margin: 0 auto;
   cursor: pointer;
   transition: var(--transition);
   font-size: 16px;

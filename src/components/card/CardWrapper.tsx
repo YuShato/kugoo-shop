@@ -8,6 +8,11 @@ import { ICard } from "../types/types";
 import CardItem from "./CardItem";
 import MoreBtn from '../products/MoreBtn';
 
+const showMore = (evt: { preventDefault: () => void }) => {
+  evt.preventDefault();
+  console.log("show more");
+};
+
 const CardWrapper = () => {
   return (
     <Container>
@@ -23,7 +28,7 @@ const CardWrapper = () => {
           ))}
       </Wrapper>
       <div className="container">
-        <MoreBtn/>
+        <MoreBtn onClickHandler={showMore}/>
       </div>
     </Container>
   );
@@ -39,7 +44,7 @@ const Wrapper = styled.div`
   gap: 28px;
   width: 100%;
   grid-template-columns: repeat(4, minmax(250px, 350px));
-  margin-top: 50px;
+  margin: 50px auto;
 `;
 
 export default CardWrapper;

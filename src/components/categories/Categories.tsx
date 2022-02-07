@@ -2,12 +2,19 @@ import { FC } from "react";
 import styled from "styled-components";
 import { MAX_CATEGORIES_LENGTH } from "../../consts/categories";
 import DefaultTitle from "../common/DefaultTitle";
+import MoreBtn from "../products/MoreBtn";
 import { IAction } from "../types/types";
 import CategoryItem from "./CategoryItem";
+import ServiceWidget from "./ServiceWidget";
 
 interface Props {
   categories: IAction[];
 }
+
+const showMore = (evt: { preventDefault: () => void }) => {
+  evt.preventDefault();
+  console.log("show more");
+};
 
 const Categories: FC<Props> = ({ categories }) => {
   return (
@@ -23,6 +30,7 @@ const Categories: FC<Props> = ({ categories }) => {
             return <CategoryItem key={index} category={category} />;
           })}
       </Container>
+      <MoreBtn onClickHandler={showMore} />
     </Wrapper>
   );
 };
@@ -42,10 +50,4 @@ const Container = styled.div`
   margin-right: auto;
 `;
 
-const ServiceWidget = styled.div`
-  display: flex;
-  width: 279px;
-  background: var(--clr-primary-4);
-  border-radius: 5px;
-`;
 export default Categories;

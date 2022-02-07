@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
-import { MAX_CATEGORIES_LENGTH } from "../../consts/categories";
+import { MAX_OFFER_LENGTH } from "../../consts/categories";
 import { IAction } from "../types/types";
 
 interface Props {
@@ -13,7 +13,7 @@ const CategoryItem: FC<Props> = ({ category }) => {
     <Category id={id.toString()}>
       <Wrapper>
         <h3>{title}</h3>
-        <p>{offer.length < 20 ? offer : `${offer.slice(0, MAX_CATEGORIES_LENGTH)}...`}</p>
+        <p>{offer.length < 20 ? offer : `${offer.slice(0, MAX_OFFER_LENGTH)}...`}</p>
       </Wrapper>
     </Category>
   );
