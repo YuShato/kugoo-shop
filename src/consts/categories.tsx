@@ -11,6 +11,6 @@ const categories = [
 
 const MAX_CATEGORIES_LENGTH = 8;
 
-const MAX_OFFER_LENGTH = 20;
+const MAX_OFFER_LENGTH = 55;
 
 export { categories, MAX_CATEGORIES_LENGTH, MAX_OFFER_LENGTH };

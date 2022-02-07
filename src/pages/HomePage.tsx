@@ -1,4 +1,5 @@
 import { FC } from "react";
+import About from "../components/about/About";
 import Actions from "../components/action/Actions";
 import Banner from "../components/action/Banner";
 import BenefitsList from "../components/benefits/BenefitsList";
@@ -27,6 +28,7 @@ const HomePage: FC = () => {
         <Banner banner={banner} />
       </div>
       <Categories categories={categories}/>
+      <About />
     </>
   );
 };

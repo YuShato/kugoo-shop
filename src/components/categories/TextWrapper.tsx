@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import LinkBtn from "../common/LinkBtn";
 
 const showQuestionWidget = (evt: { preventDefault: () => void }) => {
   evt.preventDefault();
@@ -9,7 +10,7 @@ const TextWrapper = () => {
   return (
     <Wrapper>
       <p>Менеджер ответит на любой ваш вопрос о продуктах Kugoo</p>
-      <button onClick={showQuestionWidget}> Задать вопрос</button>
+      <LinkBtn onClickHandler={showQuestionWidget}> Задать вопрос</LinkBtn>
     </Wrapper>
   );
 };
@@ -23,25 +24,6 @@ const Wrapper = styled.div`
   color: var(--clr-primary-2);
 
   button {
-    color: var(--clr-primary-1);
-    border: none;
-    cursor: pointer;
-    transition: var(--transition);
-    padding: 10px;
-    border-radius: 5px;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 17px;
-
-    &:hover,
-    &:focus,
-    &:active {
-      text-decoration: underline;
-    }
-
-    &:active {
-      color: var(--clr-primary-8);
-    }
   }
 `;
 
