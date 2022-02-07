@@ -4,8 +4,10 @@ import Banner from "../components/action/Banner";
 import BenefitsList from "../components/benefits/BenefitsList";
 import CardWrapper from "../components/card/CardWrapper";
 import Slider from "../components/carousel/Slider";
+import Categories from "../components/categories/Categories";
 import { actions, banner } from "../consts/actions";
 import benefits from "../consts/benefit";
+import { categories } from "../consts/categories";
 import images from "../consts/images";
 
 const HomePage: FC = () => {
@@ -24,6 +26,7 @@ const HomePage: FC = () => {
       <div className="container">
         <Banner banner={banner} />
       </div>
+      <Categories categories={categories}/>
     </>
   );
 };

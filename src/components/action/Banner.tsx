@@ -31,6 +31,7 @@ const Wrapper = styled.section`
   border-radius: 10px;
   width: 100%;
   max-width: 1380px;
+  margin-bottom: 100px;
 
   article {
     width: 50%;
