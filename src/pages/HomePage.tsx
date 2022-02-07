@@ -1,9 +1,10 @@
 import { FC } from "react";
 import Actions from "../components/action/Actions";
+import Banner from "../components/action/Banner";
 import BenefitsList from "../components/benefits/BenefitsList";
 import CardWrapper from "../components/card/CardWrapper";
 import Slider from "../components/carousel/Slider";
-import { actions } from "../consts/actions";
+import { actions, banner } from "../consts/actions";
 import benefits from "../consts/benefit";
 import images from "../consts/images";
 
@@ -19,6 +20,9 @@ const HomePage: FC = () => {
       <CardWrapper />
       <div className="container">
         <Actions actions={actions} />
+      </div>
+      <div className="container">
+        <Banner banner={banner} />
       </div>
     </>
   );

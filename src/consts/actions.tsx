@@ -11,4 +11,6 @@ const actions = [
   },
 ];
 
-export { actions };
+const banner = `Бесплатная доставка электросамокатов по России до 01.09`
+
+export { actions, banner };
