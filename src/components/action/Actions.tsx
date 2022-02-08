@@ -9,11 +9,13 @@ interface Props {
 
 const Actions: FC<Props> = ({ actions }) => {
   return (
-    <Wrapper>
-      {actions.map((item: IAction, index: number) => {
-        return <ActionItem action={item} key={index} />;
-      })}
-    </Wrapper>
+    <div className="container">
+      <Wrapper>
+        {actions.map((item: IAction, index: number) => {
+          return <ActionItem action={item} key={index} />;
+        })}
+      </Wrapper>
+    </div>
   );
 };
 

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { PageRoute } from "../../consts/menu";
 import { BsArrowRight } from "react-icons/bs";
 import ActionTitle from "./ActionTitle";
+import DefaultText from "../common/DefaultText";
 
 interface Props {
   action: IAction;
@@ -16,7 +17,7 @@ const ActionItem: FC<Props> = ({ action }) => {
     <Wrapper>
       <div>
         <ActionTitle title={title} />
-        <Offer>{offer}</Offer>
+        <DefaultText>{offer}</DefaultText>
         <Link to={PageRoute.actions.route}>
           Подобрать модель <BsArrowRight />
         </Link>
@@ -49,11 +50,6 @@ const Wrapper = styled.div`
     align-items: center;
     gap: 10px;
   }
-`;
-
-const Offer = styled.p`
-  font-size: 16px;
-  line-height: 23px;
 `;
 
 const ImageWrapper = styled.div`

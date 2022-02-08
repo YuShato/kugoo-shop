@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import styled from "styled-components";
 import { MAX_OFFER_LENGTH } from "../../consts/categories";
+import InfoText from "./InfoText";
 
 interface Props {
   title: string;
@@ -11,9 +12,11 @@ const BlurBlock: FC<Props> = ({ title, offer, children }) => {
   return (
     <Wrapper>
       <h3>{title}</h3>
-      <p>
-        {offer.length < MAX_OFFER_LENGTH ? offer : `${offer.slice(0, MAX_OFFER_LENGTH)}...`}
-      </p>
+      <InfoText>
+        {offer.length < MAX_OFFER_LENGTH
+          ? offer
+          : `${offer.slice(0, MAX_OFFER_LENGTH)}...`}
+      </InfoText>
       {children}
     </Wrapper>
   );
@@ -33,11 +36,6 @@ const Wrapper = styled.div`
   h3 {
     font-size: 18px;
     line-height: 26px;
-  }
-
-  p {
-    font-size: 14px;
-    line-height: 20px;
   }
 `;
 

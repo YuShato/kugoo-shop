@@ -10,14 +10,16 @@ interface BenefitsListProps {
 
 const BenefitsList: FC<BenefitsListProps> = ({ benefitsList }) => {
   return (
-    <BenefitsWrapper>
-      <ul>
-        {benefitsList.map((benefit: IBenefit, index: number) => (
-          <BenefitsItem key={index} {...benefit} />
-        ))}
-      </ul>
-      <Rating />
-    </BenefitsWrapper>
+    <div className="container">
+      <BenefitsWrapper>
+        <ul>
+          {benefitsList.map((benefit: IBenefit, index: number) => (
+            <BenefitsItem key={index} {...benefit} />
+          ))}
+        </ul>
+        <Rating />
+      </BenefitsWrapper>
+    </div>
   );
 };
 

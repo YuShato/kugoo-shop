@@ -47,13 +47,13 @@ const Slider: FC<ImagesListProps> = ({ images }) => {
   );
 
   return (
-    <>
+    <div className="container">
       <SliderWrapper ref={sliderRef} className="keen-slider banners">
         {images.map((image: IImage, index: number) => {
           return <SlideItem {...image} key={index} />;
         })}
       </SliderWrapper>
-    </>
+    </div>
   );
 };
 

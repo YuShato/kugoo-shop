@@ -103,3 +103,11 @@ export interface IAction {
   title: string;
   offer: string;
 }
+
+export interface IFeature {
+  icon: JSX.Element;
+  subtitle: string;
+  text?: string | null;
+  info?: string | null;
+  type: string;
+}

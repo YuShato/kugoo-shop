@@ -6,29 +6,29 @@ import BenefitsList from "../components/benefits/BenefitsList";
 import CardWrapper from "../components/card/CardWrapper";
 import Slider from "../components/carousel/Slider";
 import Categories from "../components/categories/Categories";
+import Features from "../components/features/Features";
 import { actions, banner } from "../consts/actions";
 import benefits from "../consts/benefit";
 import { categories } from "../consts/categories";
+import { FeatureFilters, FeatureList, FeatureTypes } from "../consts/features";
 import images from "../consts/images";
 
 const HomePage: FC = () => {
   return (
     <>
-      <div className="container">
-        <Slider images={images} />
-      </div>
-      <div className="container">
-        <BenefitsList benefitsList={benefits} />
-      </div>
+      <Slider images={images} />
+      <BenefitsList benefitsList={benefits} />
       <CardWrapper />
-      <div className="container">
-        <Actions actions={actions} />
-      </div>
-      <div className="container">
-        <Banner banner={banner} />
-      </div>
-      <Categories categories={categories}/>
+      <Actions actions={actions} />
+      <Banner banner={banner} />
+      <Categories categories={categories} />
       <About />
+      <Features
+        featuresList={FeatureList}
+        filters={FeatureFilters}
+        type={FeatureTypes.shop}
+      />
+      {/* type={FeatureTypes.shop} сделать динамичным!!!! */}
     </>
   );
 };

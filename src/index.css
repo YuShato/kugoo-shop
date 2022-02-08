@@ -80,3 +80,27 @@ a {
   display: flex;
   justify-content: space-between;
 }
+
+.link {
+  color: var(--clr-primary-1);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.link:hover,
+.link:focus {
+  text-decoration: underline;
+}
+
+.link:active {
+  color: var(--clr-primary-8);
+}

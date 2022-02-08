@@ -9,14 +9,16 @@ interface Props {
 
 const Banner: FC<Props> = ({ banner }) => {
   return (
-    <Wrapper>
-      <ImageWrapper />
-      <article>
-        <AccentLabel>Акция</AccentLabel>
-        <Title title={banner} />
-        <BannerLink />
-      </article>
-    </Wrapper>
+    <div className="container">
+      <Wrapper>
+        <ImageWrapper />
+        <article>
+          <AccentLabel>Акция</AccentLabel>
+          <Title title={banner} />
+          <BannerLink />
+        </article>
+      </Wrapper>
+    </div>
   );
 };
 

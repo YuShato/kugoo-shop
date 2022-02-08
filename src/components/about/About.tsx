@@ -4,6 +4,7 @@ import { AboutData } from "../../consts/about";
 import DefaultTitle from "../common/DefaultTitle";
 import AboutImage from "./AboutImage";
 import AboutList from "./AboutList";
+import DefaultText from "../common/DefaultText";
 
 interface Props {}
 
@@ -14,12 +15,12 @@ const About: FC<Props> = () => {
         <AboutImage />
         <Description>
           <DefaultTitle title="Kugoo-Russia — первый официальный дилер Kugoo Kirin в России" />
-          <p>
+          <DefaultText>
             Наша цель предоставить полный ассортимент современной продукции
             Kugoo Kirin, которая улучшает и упрощает жизнь. Стремимся подарить
             комфорт и эмоции, поэтому помогаем с выбором и внимательно относимся
             к сервисному обслуживанию.
-          </p>
+          </DefaultText>
           <AboutList aboutInfo={AboutData} />
         </Description>
       </Wrapper>
@@ -37,20 +38,9 @@ const Wrapper = styled.section`
   margin: 50px auto;
 `;
 
-// const AboutImage = styled.div`
-//   background-image: url("../../assets/img/about.jpg");
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   width: 40%;
-//   border-radius: 10px;
-// `;
-
 const Description = styled.article`
   display: grid;
   gap: 20px;
-  font-size: 16px;
-  line-height: 23px;
-  color: var(--clr-primary-2);
   width: 45%;
 `;
 
