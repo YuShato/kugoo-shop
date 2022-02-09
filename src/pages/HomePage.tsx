@@ -7,6 +7,7 @@ import CardWrapper from "../components/card/CardWrapper";
 import Slider from "../components/carousel/Slider";
 import Categories from "../components/categories/Categories";
 import Features from "../components/features/Features";
+import Video from "../components/video/Video";
 import { actions, banner } from "../consts/actions";
 import benefits from "../consts/benefit";
 import { categories } from "../consts/categories";
@@ -28,6 +29,7 @@ const HomePage: FC = () => {
         filters={FeatureFilters}
         type={FeatureTypes.shop}
       />
+      <Video/>
       {/* type={FeatureTypes.shop} сделать динамичным!!!! */}
     </>
   );

@@ -37,6 +37,10 @@ const Wrapper = styled.div`
     font-size: 18px;
     line-height: 26px;
   }
+
+  p {
+    color: var(--clr-primary-5);
+  }
 `;
 
 export default BlurBlock;
