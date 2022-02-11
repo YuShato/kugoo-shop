@@ -3,7 +3,7 @@ import styled from "styled-components";
 import DefaultButton from "../common/DefaultButton";
 import { VscListSelection } from "react-icons/vsc";
 import Logo from "../common/Logo";
-import { ICatalogInfo, ICatalogOption, IUserBlock } from "../types/types";
+import { ICatalogInfo, ICatalogOption, IUserBlock } from "../../types/types";
 import CatalogModal from "./CatalogModal";
 import SearchForm from "./SearchForm";
 import UserBlock from "./UserBlock";

@@ -1,4 +1,4 @@
-import { IBenefit } from "../components/types/types";
+import { IBenefit } from "../types/types";
 
 const benefits: IBenefit[] = [
   {

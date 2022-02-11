@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
-import { IFilter } from "../types/types";
+import { IFilter } from "../../types/types";
 
 interface Props {
   filter: IFilter;

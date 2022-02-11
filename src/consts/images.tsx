@@ -1,4 +1,4 @@
-import { IImage } from "../components/types/types";
+import { IImage } from "../types/types";
 
 const images: IImage[] = [
   {

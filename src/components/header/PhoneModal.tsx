@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { IPhoneNumber } from "../types/types";
+import { IPhoneNumber } from "../../types/types";
 import styled from "styled-components";
 
 interface PhoneModalProps {

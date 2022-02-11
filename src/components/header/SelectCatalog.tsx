@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Select from "react-select";
 import makeAnimated from "react-select/animated";
-import { ICatalogOption } from "../types/types";
+import { ICatalogOption } from "../../types/types";
 
 interface SelectCatalogProps {
   catalogSelectOptions: ICatalogOption[];

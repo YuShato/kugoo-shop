@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
-import { IAction } from "../types/types";
+import { IAction } from "../../types/types";
 import BlurBlock from "../common/BlurBlock";
 
 interface Props {

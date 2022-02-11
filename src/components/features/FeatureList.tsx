@@ -1,7 +1,7 @@
 import { FC } from "react";
 import styled from "styled-components";
 import { MAX_FEATURES_AMOUNT } from "../../consts/features";
-import { IFeature } from "../types/types";
+import { IFeature } from "../../types/types";
 import FeatureItem from "./FeatureItem";
 import Offer from "./Offer";
 

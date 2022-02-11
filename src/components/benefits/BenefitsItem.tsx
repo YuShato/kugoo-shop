@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
-import { IBenefit } from "../types/types";
+import { IBenefit } from "../../types/types";
 
 const BenefitsItem: FC<IBenefit> = ({ ...benefit }) => {
   const { title, subtitle } = benefit;

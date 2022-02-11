@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { PageRoute } from "../../consts/menu";
-import { IImage } from "../types/types";
+import { IImage } from "../../types/types";
 
 const SliderBtn = ({ ...image }: IImage) => {
   const { action } = image;

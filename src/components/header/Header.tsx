@@ -14,7 +14,7 @@ import {
   IMenuLink,
   IPhoneNumber,
   ISocialLink,
-} from "../types/types";
+} from "../../types/types";
 import { CatalogInfoArray, CatalogSelectOptions } from "../../consts/catalog";
 import { UserBlockData } from "../../consts/userBlock";
 import Connect from "./Connect";

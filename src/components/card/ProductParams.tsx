@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
-import { ICard } from "../types/types";
+import { ICard } from "../../types/types";
 import { GiCarBattery, GiSpeedometer } from "react-icons/gi";
 import { ImPower } from "react-icons/im";
 import { RiTimerLine } from "react-icons/ri";

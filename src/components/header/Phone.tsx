@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import styled from "styled-components";
-import { IPhoneNumber } from "../types/types";
+import { IPhoneNumber } from "../../types/types";
 import PhoneModal from "./PhoneModal";
 
 interface PhoneProps {

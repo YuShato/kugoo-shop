@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { IImage } from "../types/types";
+import { IImage } from "../../types/types";
 
 const SliderTitle = ({ ...image }: IImage) => {
   const { title, subtitle } = image;

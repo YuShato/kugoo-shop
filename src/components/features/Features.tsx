@@ -2,7 +2,7 @@ import { FC } from "react";
 import styled from "styled-components";
 import DefaultTitle from "../common/DefaultTitle";
 import FeatureList from "./FeatureList";
-import { IFeature, IFilter } from "../types/types";
+import { IFeature, IFilter } from "../../types/types";
 import FeatureFilter from "./FeatureFilter";
 
 interface Props {

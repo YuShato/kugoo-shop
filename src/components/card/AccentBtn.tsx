@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
-import { ICard } from "../types/types";
+import { ICard } from "../../types/types";
 
 interface Props {
   card: ICard;

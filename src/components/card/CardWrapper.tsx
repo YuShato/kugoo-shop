@@ -4,7 +4,7 @@ import { filters } from "../../consts/filters";
 import mockCards from "../../consts/mockData";
 import DefaultTitle from "../common/DefaultTitle";
 import ProductFilters from "../products/Filters";
-import { ICard } from "../types/types";
+import { ICard } from "../../types/types";
 import CardItem from "./CardItem";
 import MoreBtn from '../products/MoreBtn';
 

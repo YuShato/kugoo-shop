@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { ICatalogInfo } from "../types/types";
+import { ICatalogInfo } from "../../types/types";
 
 interface ModalListProps {
   title: string;

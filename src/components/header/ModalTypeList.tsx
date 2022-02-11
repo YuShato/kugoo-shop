@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { Link } from "react-router-dom";
-import { ICatalogInfo } from "../types/types";
+import { ICatalogInfo } from "../../types/types";
 import styled from "styled-components";
 
 interface Props {

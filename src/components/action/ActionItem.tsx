@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
-import { IAction } from "../types/types";
+import { IAction } from "../../types/types";
 import { Link } from "react-router-dom";
 import { PageRoute } from "../../consts/menu";
 import { BsArrowRight } from "react-icons/bs";

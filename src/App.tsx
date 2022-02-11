@@ -13,10 +13,10 @@ import {
   TestDrive,
   Error,
   AuthWrapper,
-} from "./pages";
+} from "./components/pages";
 import Footer from "./components/Footer";
 import { PageRoute } from "./consts/menu";
-import HomePage from "./pages/HomePage";
+import HomePage from "./components/pages/HomePage";
 
 const App: FC = () => {
   return (

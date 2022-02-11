@@ -1,7 +1,7 @@
 import { FC } from "react";
 import styled from "styled-components";
 import FilterButton from "../common/FilterButton";
-import { IFilter } from "../types/types";
+import { IFilter } from "../../types/types";
 
 interface Props {
     filters: IFilter[]

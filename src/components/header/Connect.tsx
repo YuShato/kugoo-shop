@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import DefaultLink from "../common/DefaultLink";
 import NavButton from "../common/NavButton";
-import { IConnectionLink, ISocialLink, IPhoneNumber } from "../types/types";
+import { IConnectionLink, ISocialLink, IPhoneNumber } from "../../types/types";
 import Phone from "./Phone";
 
 interface ConnectProps {

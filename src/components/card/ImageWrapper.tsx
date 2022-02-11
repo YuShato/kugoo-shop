@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
-import { ICard } from "../types/types";
+import { ICard } from "../../types/types";
 import AccentBtn from "./AccentBtn";
 import Arrows from "./Arrows";
 import ScaleIcon from "./ScaleIcon";

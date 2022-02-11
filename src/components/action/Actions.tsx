@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
-import { IAction } from "../types/types";
+import { IAction } from "../../types/types";
 import ActionItem from "./ActionItem";
 
 interface Props {

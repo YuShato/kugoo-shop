@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { AiOutlineSearch } from "react-icons/ai";
 import DefaultButton from "../common/DefaultButton";
 import SelectCatalog from "./SelectCatalog";
-import { ICatalogOption } from "../types/types";
+import { ICatalogOption } from "../../types/types";
 import { FC } from "react";
 
 interface SearchFormProps {

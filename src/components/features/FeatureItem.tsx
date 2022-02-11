@@ -1,7 +1,7 @@
 import { FC } from "react";
 import styled from "styled-components";
 import LinkBtn from "../common/LinkBtn";
-import { IFeature } from "../types/types";
+import { IFeature } from "../../types/types";
 
 interface Props {
   feature: IFeature;

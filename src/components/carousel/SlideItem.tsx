@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
-import { IImage } from "../types/types";
+import { IImage } from "../../types/types";
 import SliderImage from "./SliderImage";
 import SliderFreeBtn from "./SliderFreeBtn";
 import SliderTitle from "./SliderTitle";

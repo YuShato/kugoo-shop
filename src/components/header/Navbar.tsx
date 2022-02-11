@@ -2,7 +2,7 @@ import { FC } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import InfoBtn from "../common/InfoBtn";
-import { IMenuLink } from "../types/types";
+import { IMenuLink } from "../../types/types";
 
 interface NavbarProps {
   menuLinkArray: IMenuLink[];

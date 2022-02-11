@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
-import { IImage } from "../types/types";
+import { IImage } from "../../types/types";
 
 const BannerBtn: FC<IImage> = ({ ...image }) => {
   const { infoBtn } = image;

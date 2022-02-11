@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { MAX_CATEGORIES_LENGTH } from "../../consts/categories";
 import DefaultTitle from "../common/DefaultTitle";
 import MoreBtn from "../products/MoreBtn";
-import { IAction } from "../types/types";
+import { IAction } from "../../types/types";
 import CategoryItem from "./CategoryItem";
 import ServiceWidget from "./ServiceWidget";
 

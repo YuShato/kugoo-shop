@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
-import { ICatalogInfo } from "../types/types";
+import { ICatalogInfo } from "../../types/types";
 import ModalList from "./ModalList";
 import ModalTypeList from "./ModalTypeList";
 

@@ -1,7 +1,7 @@
 import { FC } from "react";
 import CardTitle from "./CardTitle";
 import styled from "styled-components";
-import { ICard } from "../types/types";
+import { ICard } from "../../types/types";
 import ProductParams from "./ProductParams";
 import Price from "./Price";
 import UserBtns from "./UserBtns";
