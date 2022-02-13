@@ -11,7 +11,11 @@ import Video from "../video/Video";
 import { actions, banner } from "../../consts/actions";
 import benefits from "../../consts/benefit";
 import { categories } from "../../consts/categories";
-import { FeatureFilters, FeatureList, FeatureTypes } from "../../consts/features";
+import {
+  FeatureFilters,
+  FeatureList,
+  FeatureTypes,
+} from "../../consts/features";
 import images from "../../consts/images";
 
 const HomePage: FC = () => {
@@ -29,7 +33,7 @@ const HomePage: FC = () => {
         filters={FeatureFilters}
         type={FeatureTypes.shop}
       />
-      <Video/>
+      <Video />
       {/* type={FeatureTypes.shop} сделать динамичным!!!! */}
     </>
   );
