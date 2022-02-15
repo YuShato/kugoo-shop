@@ -1,9 +1,11 @@
+import { MAX_PRODUCTS_LENGTH } from '../../consts/consts'
 import { ActionType, ProductAction, ProductsState } from '../../types/product'
 
 const initialState: ProductsState = {
   products: [],
   isLoading: false,
-  error: null
+  error: null,
+  productsLimit: MAX_PRODUCTS_LENGTH
 }
 
 export const productReducer = (
@@ -12,20 +14,26 @@ export const productReducer = (
 ): ProductsState => {
   switch (action.type) {
     case ActionType.FETCH_PRODUCTS:
-      return { isLoading: true, error: null, products: [] }
+      return { ...state, isLoading: true, error: null, products: [] }
 
     case ActionType.FETCH_PRODUCTS_SUCCESS:
-      return { isLoading: false, error: null, products: action.payload }
+      return {
+        ...state,
+        isLoading: false,
+        error: null,
+        products: action.payload
+      }
 
     case ActionType.FETCH_PRODUCTS_ERROR:
-      return { isLoading: false, error: action.payload, products: [] }
+      return { ...state, isLoading: false, error: action.payload, products: [] }
+
+    case ActionType.SET_PRODUCTS_LIMIT:
+      return {
+        ...state,
+        productsLimit: action.payload
+      }
+
     default:
       return state
   }
 }
-
-
-// пример запроса
-// const isLoading: boolean = useTypedSelector(
-//   (state) => state.product.isLoading
-// );
