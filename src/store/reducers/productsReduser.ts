@@ -5,7 +5,8 @@ const initialState: ProductsState = {
   products: [],
   isLoading: false,
   error: null,
-  productsLimit: MAX_PRODUCTS_LENGTH
+  productsLimit: MAX_PRODUCTS_LENGTH,
+  maxProductsLength: 0
 }
 
 export const productReducer = (
@@ -23,6 +24,9 @@ export const productReducer = (
         error: null,
         products: action.payload
       }
+
+    case ActionType.SET_PRODUCTS_LENGTH:
+      return { ...state, maxProductsLength: action.payload }
 
     case ActionType.FETCH_PRODUCTS_ERROR:
       return { ...state, isLoading: false, error: action.payload, products: [] }

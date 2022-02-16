@@ -11,24 +11,21 @@ import Loading from "../loading/Loading";
 import { useActions } from "../../store/hooks/useActions";
 import Error from "../error/Error";
 import { setProductsLimit } from "../../store/action-creator/product";
-import { MAX_PRODUCTS_LENGTH } from "../../consts/consts";
 
 const CardWrapper = () => {
-  const { isLoading, error, products, productsLimit } = useTypedSelector(
-    (store) => store.product
-  );
+  const { isLoading, error, products, productsLimit, maxProductsLength } =
+    useTypedSelector((store) => store.product);
 
   const { fetchProducts } = useActions();
 
   const showMore = () => {
-    let  currentLimit = MAX_PRODUCTS_LENGTH + productsLimit;
-    setProductsLimit(currentLimit);
-    fetchProducts(0, currentLimit)
+    setProductsLimit(maxProductsLength);
+    fetchProducts(0, maxProductsLength);
   };
 
   useEffect(() => {
     fetchProducts(0, productsLimit);
-  }, [productsLimit]);
+  }, []);
 
   if (isLoading) {
     return <Loading />;
@@ -37,6 +34,7 @@ const CardWrapper = () => {
   if (error) {
     return <Error error={error} />;
   }
+
   return (
     <Container>
       <div className="container">
@@ -49,7 +47,12 @@ const CardWrapper = () => {
         ))}
       </Wrapper>
       <div className="container">
-        <MoreBtn onClickHandler={() => showMore()} />
+        <MoreBtn
+          className={
+            products.length === maxProductsLength ? "hidden" : undefined
+          }
+          onClickHandler={showMore}
+        />
       </div>
     </Container>
   );

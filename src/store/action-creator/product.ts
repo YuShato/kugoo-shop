@@ -16,6 +16,11 @@ export const fetchProducts = (start = 0, end = MAX_PRODUCTS_LENGTH) => {
       })
 
       dispatch({
+        type: ActionType.SET_PRODUCTS_LENGTH,
+        payload: Number(response.headers['x-total-count'])
+      })
+
+      dispatch({
         type: ActionType.FETCH_PRODUCTS_SUCCESS,
         payload: response.data
       })
